@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css" /> 
+
+  </head>
+
+  <body>
+
+    <div class="div_nav navbar-inverse">
+      <div class="container">
+      
+        <!-- nav -->
+        <div class="navbar-header">
+          <a href="/home" class="navbar-brand"><p>Toastmasters</p></a>
+        </div>
+
+        <nav class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/clubs">Clubs</a></li>
+            <li><a href="/people">People</a></li>
+            <li><a href="/about">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Vote</a></li>
+                <li><a href="#">Timer</a></li>
+                <li><a href="#">CC Manual</a></li>
+                <li><a href="#">CL Manual</a></li>
+                <li><a href="#">AC Manual</a></li>
+              </ul> 
+            </li>            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Go</button>
+              </form>
+            </li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </nav>
+        
+      </div><!-- end of container  --> 
+	</div><!-- end of div nav  --> 
+
+	
+    <div class="div_head">
+      <div class="container">
+	    <div class="row">
+	      <div class="col-md-3"></div>
+          <div class="col-md-1">
+            <img src="/static/pic/logo.jpg" alt="" class="img-rounded" height="100" width="100">
+          </div>
+          <div class="col-md-5">
+            <h1>Toastmaster</h1>
+            <h3>Where Leaders Are Made</h3>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div><!-- end of container  --> 
+    </div><!-- end of div head  -->
+
+
+    <div class="div_body">
+      <div class="container">
+	    {% block content %}{% endblock %}
+	  </div>
+    </div>
+
+
+    <div class="div_foot">
+      <div class="container">
+      <div class="row">
+	      <div class="col-md-3"></div>
+          <div class="col-md-1">
+            <label><img src="/static/pic/synopsys.png" class="img-rounded" height="100" width="100">
+          </div>
+          <div class="col-md-5">
+            <address>
+              <strong>Synopsys Toastmaster Club</strong><br>
+              Time: 18:45-21:15PM, every other Thursday<br>
+              Venue: 18F, Room Great Wall, Zhaofeng Plaza, No. 1027, Changning Road,<br>
+              Shanghai, China, 200050<br>
+              Traffic: Metro Line 2, Zhongshan Park Station, Exit #7<br>
+            </address>
+          </div>
+          <div class="col-md-3"></div>
+    
+      </div><!-- end of container  -->
+    </div><!-- end of div foot  -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdnbootcsscom/jquery/2/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>

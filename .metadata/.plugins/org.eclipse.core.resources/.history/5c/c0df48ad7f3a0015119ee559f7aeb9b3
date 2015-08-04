@@ -1,0 +1,12 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+<p>Toastmasters HOME</p>
+{% endblock %}
+
+{% block content %}
+{% for i in modules %}
+<p>{{i}}<p>
+{% endfor %}
+<p>haha</p>
+{% endblock %}

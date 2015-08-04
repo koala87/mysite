@@ -1,0 +1,9 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+<p>Login</p>
+{% endblock %}
+
+{% block content %}
+<p>haha4</p>
+{% endblock %}

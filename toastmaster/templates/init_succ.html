@@ -1,0 +1,132 @@
+$def with (items)
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Toastmaster Info</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css" /> 
+
+  </head>
+
+  <body>
+
+    <div class="div_black">
+      <div class="container">
+      <!-- nav -->
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand"><p name="title">Toastmaster</p></a>
+      </div>
+
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Clubs</a></li>
+          <li><a href="#">Members</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Comment</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Item1</a></li>
+              <li><a href="#">Item2</a></li>
+              <li><a href="#">Item3</a></li>
+            </ul> 
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Go</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </div>
+
+    <div class="div_back">
+      <div class="container">
+        <table>
+          <tr>
+            <td><img src="/static/pic/logo.jpg" alt="" class="img-rounded" height="150" width="150"></td>
+            <td>
+              <h1>Toastmaster</h1>
+              <h2>Master Your Stage. Toast Your Life.</h2>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Best Speaker Vote -->
+      <div class="panel panel-danger">
+
+        <div class="panel-heading">
+          <h3 class="panel-title">New Vote Successfully</h3>
+        </div>
+
+        <div class="panel-body">
+          <form role="form" id="vform" method="POST">
+          <table class="table table-bordered" id="vote">
+            <thead>
+              <th>Topic</th>
+              <th>Choices</th>
+            </thead>
+            <tbody id="vote_body">
+              $for item in items:
+                $ topic, choices = item
+                <tr>
+                  <td>
+                    <label><h3><span class="label label-default">$topic</span></h3></label>
+                  </td>
+                  <td>
+                    $for chs in choices:
+                      <label><h3><span class="label label-default">$chs</span></h3></label>
+                  </td>
+                </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <a href="/init" class="btn btn-danger">Back</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </form>
+
+        </div><!-- end of panel-body-->
+
+      </div><!-- end of panel-primary -->
+
+      
+    </div><!-- end of container  -->
+
+    <div class="div_back">
+      <div>
+        <address>
+          <strong>Synopsys Toastmaster Club</strong><br>
+          18F, Great Wall Room, Zhaofeng Plaza, Changning Road 1027<br>
+          Shanghai, China, 200050<br>
+        </address>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdnbootcsscom/jquery/2/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>

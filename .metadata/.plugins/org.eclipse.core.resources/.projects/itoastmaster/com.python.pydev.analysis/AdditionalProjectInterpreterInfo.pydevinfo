@@ -1,0 +1,99 @@
+-- VERSION_3
+-- START DISKCACHE
+C:\Users\jyqi\mysite\.metadata\.plugins\org.eclipse.core.resources\.projects\itoastmaster\com.python.pydev.analysis\v1_indexcache
+.v1_indexcache
+member.apps|0|C:\Users\jyqi\mysite\itoastmaster\member\apps.py
+login.admin|0|C:\Users\jyqi\mysite\itoastmaster\login\admin.py
+member.migrations.__init__|0|C:\Users\jyqi\mysite\itoastmaster\member\migrations\__init__.py
+polls.tests|0|C:\Users\jyqi\mysite\itoastmaster\polls\tests.py
+itoastmaster.views|0|C:\Users\jyqi\mysite\itoastmaster\itoastmaster\views.py
+itoastmaster.__init__|0|C:\Users\jyqi\mysite\itoastmaster\itoastmaster\__init__.py
+polls.models|0|C:\Users\jyqi\mysite\itoastmaster\polls\models.py
+login.tests|0|C:\Users\jyqi\mysite\itoastmaster\login\tests.py
+login.models|0|C:\Users\jyqi\mysite\itoastmaster\login\models.py
+polls.views|0|C:\Users\jyqi\mysite\itoastmaster\polls\views.py
+member.admin|0|C:\Users\jyqi\mysite\itoastmaster\member\admin.py
+login.apps|0|C:\Users\jyqi\mysite\itoastmaster\login\apps.py
+login.migrations.__init__|0|C:\Users\jyqi\mysite\itoastmaster\login\migrations\__init__.py
+member.tests|0|C:\Users\jyqi\mysite\itoastmaster\member\tests.py
+polls.__init__|0|C:\Users\jyqi\mysite\itoastmaster\polls\__init__.py
+itoastmaster.urls|0|C:\Users\jyqi\mysite\itoastmaster\itoastmaster\urls.py
+member.models|0|C:\Users\jyqi\mysite\itoastmaster\member\models.py
+member.__init__|0|C:\Users\jyqi\mysite\itoastmaster\member\__init__.py
+member.views|0|C:\Users\jyqi\mysite\itoastmaster\member\views.py
+login.__init__|0|C:\Users\jyqi\mysite\itoastmaster\login\__init__.py
+login.views|0|C:\Users\jyqi\mysite\itoastmaster\login\views.py
+itoastmaster.settings|0|C:\Users\jyqi\mysite\itoastmaster\itoastmaster\settings.py
+-- END DISKCACHE
+-- START DICTIONARY
+21
+10=member.apps
+17=Choice
+18=Migration
+7=itoastmaster.views
+20=PollsConfig
+3=polls.models
+15=polls.views
+12=polls.apps
+9=login.apps
+2=itoastmaster.wsgi
+4=polls.__init__
+14=itoastmaster.urls
+13=polls.urls
+19=LoginConfig
+5=member.__init__
+11=polls.migrations.0001_initial
+16=Question
+6=login.__init__
+8=login.views
+21=MemberConfig
+1=itoastmaster.settings
+-- END DICTIONARY
+-- START TREE 1
+29
+all|1|ALLOWED_HOSTS!11@
+app|1|application!19@
+aut|1|AUTH_PASSWORD_VALIDATORS!11@
+bas|1|BASE_DIR!11@
+cho|1|Choice!25@
+dat|1|DATABASES!11@
+deb|1|DEBUG!11@
+def|3|default_app_config!35@default_app_config!43@default_app_config!51@
+det|0|
+hom|1|home!58@
+ind|0|
+ins|1|INSTALLED_APPS!11@
+lan|1|LANGUAGE_CODE!11@
+log|2|login!66@LoginConfig!73@
+mem|1|MemberConfig!81@
+mid|1|MIDDLEWARE_CLASSES!11@
+mig|1|Migration!89@
+pol|1|PollsConfig!97@
+que|1|Question!25@
+res|0|
+roo|1|ROOT_URLCONF!11@
+sec|1|SECRET_KEY!11@
+sta|2|STATICFILES_DIRS!11@STATIC_URL!11@
+tem|1|TEMPLATES!11@
+tim|1|TIME_ZONE!11@
+url|2|urlpatterns!107@urlpatterns!115@
+use|3|USE_L10N!11@USE_I18N!11@USE_TZ!11@
+vot|1|vote1!122@
+wsg|1|WSGI_APPLICATION!11@
+-- END TREE
+-- START TREE 2
+13
+__s|2|__str__!16&26@__str__!17&26@
+cho|1|choice_text!17&27@
+con|0|
+dep|1|dependencies!18&91@
+get|0|
+ini|1|initial!18&91@
+mod|0|
+nam|3|name!19&75@name!20&99@name!21&83@
+ope|1|operations!18&91@
+pub|1|pub_date!16&27@
+que|2|question_text!16&27@question!17&27@
+tem|0|
+vot|1|votes!17&27@
+-- END TREE

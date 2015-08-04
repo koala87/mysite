@@ -1,0 +1,85 @@
+$def with (data)
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easy Work">
+    <meta name="author" content="Harry Jin">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>SYNOPSYS TMC VOTE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!-- Best Speaker Vote -->
+      <div class="panel panel-primary">
+
+        <div class="panel-heading">
+          <h3 class="panel-title">Best Speaker</h3>
+        </div>
+
+        <div class="panel-body">
+          <form role="form" id="comment">
+          <table class="table table-bordered">
+            <thead>
+              <th>Best</th>
+              <th>Speaker</th>
+            </thead>
+            <tbody>
+            $ bsp, btt, brole, mlike = data
+              <tr>
+                <td>Best Speaker</td>
+                <td>
+                  $for i in bsp:
+                    $i[0]($i[1])
+                </td>
+              </tr>
+              <tr>
+                <td>Best Table Topic</td>
+                <td>
+                  $for i in btt:
+                    $i[0]($i[1])
+                </td>
+              </tr>
+              <tr>
+                <td>Best Role Taker</td>
+                <td>
+                  $for i in brole:
+                    $i[0]($i[1])
+                </td>
+              </tr>
+              <tr>
+                <td>Most Like Person</td>
+                <td>
+                  $for i in mlike:
+                    $i[0]($i[1])
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          </form>
+
+        </div><!-- end of panel-body-->
+
+      </div><!-- end of panel-primary -->
+
+      <h3><a href="/vote">Back to Home</a></h3>
+
+    </div><!-- end of container  -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>

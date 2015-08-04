@@ -1,0 +1,57 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+<p>Toastmasters HOME</p>
+{% endblock %}
+
+{% block content %}
+<p>vote</p>
+<form role="form" id="vform" method="POST">
+          <table class="table table-bordered" id="vote">
+            <thead>
+              <th>Topic</th>
+              <th>Choices</th>
+              <th>Add</th>
+              <th>Del</th>
+            </thead>
+            <tbody id="vote_body">
+              $ cnt = 0
+              $for item in items:
+                $ topic, multi, num = item
+                $ vid = 'vote_%d' % cnt
+                $ cnt += 1
+                <tr>
+                  <td><input type="input" class="form-control" value="$topic" name="$vid"></td>
+                  <td>
+                    $for i in range(num):
+                      $ chint = 'choice %d' % (i+1)
+                      $ cid = '%s_chs_%d' % (vid, i+1)
+                      <label>
+                        <input type="input" class="form-control" placeholder="$chint" name="$cid">
+                      </label>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger" onClick="addChoice(this)">+</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger" onClick="delItem(this)">-</button>
+                  </td>
+                </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <label>
+                    <button type="button" class="btn btn-danger" onClick="addItem()">+</button>
+                  </label>
+                  <label>
+                    <button type="submit" class="btn btn-danger" onClick="mySubmit()">Submit</button>
+                  </label>
+                </td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+          
+{% endblock %}

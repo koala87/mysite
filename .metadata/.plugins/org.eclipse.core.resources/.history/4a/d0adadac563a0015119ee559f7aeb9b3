@@ -1,0 +1,14 @@
+from django.shortcuts import render
+
+from polls.models import Choice, Question
+
+def index(request):
+    
+    choices = Choice.objects()
+
+    questions = Question.objects()
+
+    return render(request, 'polls/home.html', {'choices' : choices, 'questions' : questions})
+
+
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css" /> 
+
+  </head>
+
+  <body>
+
+    <div class="div_nav navbar-inverse">
+      <div class="container">
+      <!-- nav -->
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand"><p>Toastmaster</p></a>
+      </div>
+
+      <nav class="collapse navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Clubs</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Useful<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Vote</a></li>
+              <li><a href="#">Timer</a></li>
+              <li><a href="#">CC Manual</a></li>
+              <li><a href="#">CL Manual</a></li>
+              <li><a href="#">AC Manual</a></li>
+            </ul> 
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Go</button>
+            </form>
+          </li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </nav>
+      </div>
+    </div>
+
+    <div class="div_head">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-1">
+          <img src="/static/pic/logo.jpg" alt="" class="img-rounded" height="100" width="100">
+        </div>
+        <div class="col-md-4">
+          <h1>Toastmaster</h1>
+          <h3>Where Leaders Are Made</h3>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+
+    <div class="div_dev">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-2">
+          <img src="/static/pic/name.jpg" alt="" class="img-rounded" height="30" width="30">
+          Harry Jin 
+        </div>
+        <div class="col-md-2">
+          <img src="/static/pic/weichat.jpg" alt="" class="img-rounded" height="30" width="30">
+          blog460742447 
+        </div>
+        <div class="col-md-2">
+          <img src="/static/pic/mail.jpg" alt="" class="img-rounded" height="30" width="30">
+          jinyingqi@126.com
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+
+    <div class="div_body">
+        <div class="container">
+        <br><br>
+        <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+    	<ul>
+    		{% for question in questions %}
+        		<li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    		{% endfor %}
+    	</ul>
+        </div>
+          
+        </div><!-- end of container  -->
+    </div>
+
+
+    <div class="div_foot navbar-fixed-bottom">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-1">
+            <label><img src="/static/pic/synopsys.png" class="img-rounded" height="150" width="150">
+        </div>
+        <div class="col-md-4">
+      <address>
+        <strong>Synopsys Toastmaster Club</strong><br>
+        Time: 18:45-21:15PM, every other Thursday<br>
+        Venue: 18F, Room Great Wall, Zhaofeng Plaza, No. 1027, Changning Road,<br>
+        Shanghai, China, 200050<br>
+        Traffic: Metro Line 2, Zhongshan Park Station, Exit #7<br>
+        Slogan: Master Your Stage. Toast Your Life.
+      </address>
+        </div>
+        <div class="col-md-4"></div>
+        </div>
+    
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdnbootcsscom/jquery/2/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>

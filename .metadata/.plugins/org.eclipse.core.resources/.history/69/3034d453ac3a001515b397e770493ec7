@@ -1,0 +1,15 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+<p>Toastmasters HOME</p>
+{% endblock %}
+
+{% block content %}
+
+
+{% for module in modules %}
+	<label><img src="{{module.0}}" class="img-rounded" height="100" width="100">
+    <a href="/{{module.1}}"><h4>${{module.2}}</h4></a></label>
+{% endfor %}
+
+{% endblock %}

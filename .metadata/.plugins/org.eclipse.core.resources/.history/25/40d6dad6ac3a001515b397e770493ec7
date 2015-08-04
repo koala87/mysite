@@ -1,0 +1,18 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+<p>Toastmasters HOME</p>
+{% endblock %}
+
+{% block content %}
+
+
+{% for module in modules %}
+	{% if forloop.counter == 0 %}
+	haha
+	{% endif %}
+	<label><img src="{{module.1}}" class="img-rounded" height="80" width="80">
+    <a href="/{{module.2}}"><h4>{{module.0}}</h4></a></label>
+{% endfor %}
+
+{% endblock %}

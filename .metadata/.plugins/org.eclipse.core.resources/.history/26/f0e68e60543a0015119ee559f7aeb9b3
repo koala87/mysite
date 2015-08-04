@@ -1,0 +1,10 @@
+from django.shortcuts import render
+
+from polls.models import Choice, Question
+
+def index(request):
+    
+    return render(request, 'polls/home.html')
+
+
+

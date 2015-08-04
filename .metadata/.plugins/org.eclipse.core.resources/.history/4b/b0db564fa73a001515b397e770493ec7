@@ -1,0 +1,14 @@
+from django.shortcuts import render
+
+def vote1(request):
+    
+    items = [
+            ['Best Speaker', range(6)],
+            ['Best Table Topic', range(8)],
+            ['Best Role Taker', range(8)],
+    ]
+    
+    return render(request, 'polls/vote.html', {'items' : items})
+
+
+

@@ -1,0 +1,10 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+<p>Toastmasters HOME</p>
+{% endblock %}
+
+{% block content %}
+<p>{{ name }}</p>
+<p>haha1</p>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+<p>Toastmasters HOME</p>
+{% endblock %}
+
+{% block content %}
+<p>vote</p>          
+{% endblock %}
