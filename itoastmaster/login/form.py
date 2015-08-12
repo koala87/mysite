@@ -29,5 +29,7 @@ class RegisterInfo(ModelForm):
          fields = ('name', 'sex', 'status', 'lovebridge', 'hometown', 'school', 
                    'club', 'join_dt', 'progress', 'positions',
                    'interest', 'self_introduction', 'word')
+         
+         
     
     
