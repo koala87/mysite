@@ -1,0 +1,11 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+from login.models import Info
+
+def lovebridge(request):
+    
+    people = Info.objects.all()
+        
+    return render(request, 'lovebridge/lovebridge.html', {'people' : people})

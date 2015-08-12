@@ -1,0 +1,33 @@
+from __future__ import unicode_literals
+
+from django.db import models
+
+class Manual_Kind(models.Model):
+    kind = models.CharField(max_length=10)
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.kind
+    
+    
+class Manual(models.Model):
+    kind = models.ForeignKey(Manual_Kind)
+    level = models.IntegerField()
+    title = models.TextField()
+    description = models.TextField(blank=True)
+    ltime = models.FloatField()
+    mtime = models.FloatField()
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.title
+    
+# Create your models here.
+class Objective(models.Model):
+    description = models.CharField(max_length=200)
+    manual = models.ForeignKey(Manual)
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.description
+    
+    
+    
+

@@ -1,0 +1,30 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+def cc_manual(request):
+    
+    # title, num, multi
+    items = [
+            ['Best Speaker', range(6), False],
+            ['Best Table Topic', range(8), False],
+            ['Best Role Taker', range(8), False],
+    ]
+    
+    print request
+    
+    return render(request, 'polls/vote.html', {'items' : items})
+
+
+def cl_manual(request):
+    
+    # title, num, multi
+    items = [
+            ['Best Speaker', range(6), False],
+            ['Best Table Topic', range(8), False],
+            ['Best Role Taker', range(8), False],
+    ]
+    
+    print request
+    
+    return render(request, 'polls/vote.html', {'items' : items})

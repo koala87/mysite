@@ -1,0 +1,16 @@
+from __future__ import unicode_literals
+
+from django.db import models
+
+# Create your models here.
+
+class Club(models.Model):
+
+    name = models.CharField(max_length=64)
+    addr = models.DataField(max_length=200)
+    time = models.CharField(max_length=64)
+    tel = models.CharField(max_length=32)
+    email = models.EmailField(max_length=32)
+    people = models.CharField(max_length=64)
+    description = models.DataField()
+    fund_time = models.CharField(max_length=64)

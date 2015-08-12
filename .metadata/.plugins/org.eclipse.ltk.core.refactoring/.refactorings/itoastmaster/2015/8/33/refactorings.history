@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;itoastmaster/templates/material/about.html&apos; to &apos;material.html&apos;" description="Rename resource &apos;about.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="templates/material/about.html" name="material.html" stamp="1439307048855" updateReferences="true"/>
+</session>

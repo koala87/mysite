@@ -1,0 +1,18 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+Toastmasters HOME
+{% endblock %}
+
+{% block content %}
+
+{% for i in num_list %}
+	{{modules.0.0}}
+{% endfor %}
+
+{% for i in items %}
+	<label><img src="{{items.i.1}}" class="img-rounded" height="80" width="80">
+    <a href="/{{items.i.2}}"><h4>{{items.i.0}}</h4></a></label>
+{% endfor %}
+
+{% endblock %}

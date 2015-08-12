@@ -1,0 +1,10 @@
+from django.forms import ModelForm
+
+from login.models import UserInfo
+
+class RegisterInfo(ModelForm):
+    
+    class Meta: 
+         model = S
+    
+    

@@ -1,0 +1,232 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+REGISTER
+{% endblock %}
+
+{% block script %}
+	function myload() {
+      var birth_year = document.getElementById("birth_year");
+      for (var i=1950;i<2015;i++)
+      {
+        var opt = document.createElement("option");
+        opt.innerHTML = i
+        opt.value = i
+        birth_year.appendChild(opt)
+      }
+      var birth_month = document.getElementById("birth_month");
+      for (var i=1;i<13;i++)
+      {
+        var opt = document.createElement("option");
+        opt.innerHTML = i
+        birth_month.appendChild(opt)
+      }
+      var birth_day = document.getElementById("birth_day");
+      for (var i=1;i<32;i++)
+      {
+        var opt = document.createElement("option");
+        opt.innerHTML = i
+        birth_day.appendChild(opt)
+      }
+    }
+    
+    
+function makeCenter()
+
+{
+
+    $('#choose-box-wrapper').css("display","block");
+
+    $('#choose-box-wrapper').css("position","absolute");
+
+    $('#choose-box-wrapper').css("top", Math.max(0, (($(window).height() - $('#choose-box-wrapper').outerHeight()) / 2) + $(window).scrollTop()) + "px");
+
+    $('#choose-box-wrapper').css("left", Math.max(0, (($(window).width() - $('#choose-box-wrapper').outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+
+}
+
+
+function initProvince()
+
+{
+
+    //原先的省份列表清空
+
+    $('#choose-a-province').html('');
+
+    for(i=0;i<schoolList.length;i++)
+
+    {
+
+        $('#choose-a-province').append('<a class="province-item" province-id="'+schoolList[i].id+'">'+schoolList[i].name+'</a>');
+
+    }
+
+    //添加省份列表项的click事件
+
+    $('.province-item').bind('click', function(){
+
+            var item=$(this);
+
+            var province = item.attr('province-id');
+
+            var choosenItem = item.parent().find('.choosen');
+
+            if(choosenItem)
+
+                $(choosenItem).removeClass('choosen');
+
+            item.addClass('choosen');
+
+            //更新大学列表
+
+            initSchool(province);
+
+        }
+
+    );
+
+}
+
+ 
+
+function initSchool(provinceID)
+
+{
+
+    //原先的学校列表清空
+
+    $('#choose-a-school').html('');
+
+    var schools = schoolList[provinceID-1].school;
+
+    for(i=0;i<schools.length;i++)
+
+    {
+
+        $('#choose-a-school').append('<a class="school-item" school-id="'+schools[i].id+'">'+schools[i].name+'</a>');
+
+    }
+
+    //添加大学列表项的click事件
+
+    $('.school-item').bind('click', function(){
+
+            var item=$(this);
+
+            var school = item.attr('school-id');
+
+            //更新选择大学文本框中的值
+
+            $('#school-name').val(item.text());
+
+            //关闭弹窗
+
+            hide();
+
+        }
+
+    );
+
+}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<form method="POST">
+
+  <table>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" class="form-control" name="name"></td>
+      </tr>
+      <tr>
+        <td>Sex</td>
+        <td>
+          <input type="radio" name="sex" value="male" checked>Male
+          <input type="radio" name="sex" value="female">Female
+        </td>
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td>
+          <input type="radio" name="status" value="single" checked>Single
+          <input type="radio" name="status" value="married">Married
+          <input type="radio" name="status" value="love">Love
+          <input type="radio" name="status" value="busy">Busy
+        </td>
+      </tr>
+      <tr>
+        <td>Birth</td>
+        <td>
+          <table>
+            <tr>
+              <td><select class="form-control" name="birth_year" id="birth_year"></select></td>
+              <td><select class="form-control" name="birth_month" id="birth_month"></select></td>
+              <td><select class="form-control" name="birth_day" id="birth_day"></select></td>
+            </tr>
+          </table>
+      </tr>
+      <tr>
+        <td>Hometown</td>
+        <td><input type="text">Province<input type="text">City<input type="text">Town</td>
+      </tr>
+      <tr>
+        <td>Club</td>
+        <td><input type="text" class="form-control" name="club"></td>
+      </tr>
+      <tr>
+        <td>Self Intro.</td>
+        <td><textarea class="form-control" rows="3" name="intro"></textarea></td>
+      </tr>
+      <tr>
+        <td>Portrait</td>
+        <td><input type="file" name="portrait"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit" class="btn btn-default">Save</button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+<div id="choose-box-wrapper">
+
+  <div id="choose-box">
+
+    <div id="choose-box-title">
+
+        <span>选择学校</span>
+
+    </div>
+
+    <div id="choose-a-province">
+
+    </div>
+
+    <div id="choose-a-school">
+
+    </div>
+
+    <div id="choose-box-bottom">
+
+        <input type="botton" onclick="hide()" value="关闭" />
+
+    </div>
+
+  </div>
+
+</div>
+</td>
+      </tr>
+    </tbody>
+  
+  </table>
+  
+</form>
+
+{% endblock %}

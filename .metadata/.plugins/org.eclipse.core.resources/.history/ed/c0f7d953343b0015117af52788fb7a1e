@@ -1,0 +1,22 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+Toastmasters HOME
+{% endblock %}
+
+{% block content %}
+
+{% for i in num_list %}
+	{% if i == 0 or i == 3 or i == 6 %}
+		<div class="row">
+	{% endif %}
+	<div class="col-md-4">
+		<label><img src="{{modules.i.1}}" class="img-rounded" height="80" width="80">
+    	<a href="/{{modules.i.2}}"><h4>{{modules.i.0}}</h4></a></label>
+	</div>
+	{% if i == 2 or i == 5 or i == 8 %}
+		</div>
+	{% endif %}
+{% endfor %}
+
+{% endblock %}

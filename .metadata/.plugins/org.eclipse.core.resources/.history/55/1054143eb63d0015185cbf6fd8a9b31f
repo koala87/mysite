@@ -1,0 +1,50 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+
+{% block script %}
+	
+	var cnt = 1
+	function next_ident_pic(){
+		var pic = document.getElementById("ident_pic");
+		pic.setAttributes("src", "/static/pic/verify/{{ident_pics.cnt}}")
+		alert(pic)
+    }
+      
+{% endblock %}
+
+
+{% block content %}
+
+<form method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="passwd">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password Again</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password Again" name="passwd1">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Identifying Code</label>
+    <div class="row">
+      <div class="col-md-6">
+        <label><img id="ident_pic" src="/static/pic/verify/{{ident_pics.0}}" width="150"/>    <button class="btn btn-danger" onclick="next_ident_pic()">next</button></label>
+      </div>
+      <div class="col-md-6">
+        <br>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Identifying Code" name="icode"">
+      </div>
+    </div">
+  </div>
+  <button type="submit" class="btn btn-default">Register</button>
+</form>
+ 
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "common/mine.html" %}
+
+{% block left %}
+
+<h4>photo</h4>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+LOVEBRIDGE
+{% endblock %}
+
+
+{% block content %}
+<table>
+  <tbody>
+	{% for i in people %}
+	  <tr>
+        <td>{{i.name}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>    
+</table>
+{% endblock %}

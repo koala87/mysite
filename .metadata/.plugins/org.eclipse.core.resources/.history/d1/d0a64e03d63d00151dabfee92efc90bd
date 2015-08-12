@@ -1,0 +1,12 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+LOGOUT
+{% endblock %}
+
+
+{% block content %}
+
+{{name}} logout successfully!
+
+{% endblock %}

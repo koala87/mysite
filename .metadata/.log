@@ -2202,3 +2202,2158 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 	at org.eclipse.ecf.internal.provider.filetransfer.httpclient4.ECFHttpClientProtocolSocketFactory.connectSocket(ECFHttpClientProtocolSocketFactory.java:84)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:148)
 	... 32 more
+!SESSION 2015-08-05 08:01:44.461 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 08:01:56.130
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-08-05 10:40:33.187 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 10:40:40.253
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-08-05 13:10:16.008 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 13:10:21.140
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-05 13:31:37.811
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-05 13:31:37.811
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@aac60b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13602c0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 14:02:57.383
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-05 14:02:57.383
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.python.pydev.shared_core 1 1 2015-08-05 14:33:55.973
+!MESSAGE No existing console history at: C:\Users\jyqi\mysite\.metadata\.plugins\org.python.pydev.shared_interactive_console\history.py
+!STACK 0
+java.io.FileNotFoundException: C:\Users\jyqi\mysite\.metadata\.plugins\org.python.pydev.shared_interactive_console\history.py (The system cannot find the file specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at java.io.FileReader.<init>(Unknown Source)
+	at org.python.pydev.shared_interactive_console.console.ScriptConsoleGlobalHistory.load(ScriptConsoleGlobalHistory.java:95)
+	at org.python.pydev.shared_interactive_console.console.ScriptConsoleGlobalHistory.<init>(ScriptConsoleGlobalHistory.java:44)
+	at org.python.pydev.shared_interactive_console.console.ScriptConsoleGlobalHistory.<clinit>(ScriptConsoleGlobalHistory.java:36)
+	at org.python.pydev.shared_interactive_console.console.ScriptConsoleHistory.<init>(ScriptConsoleHistory.java:56)
+	at org.python.pydev.shared_interactive_console.console.ui.ScriptConsole.<init>(ScriptConsole.java:73)
+	at org.python.pydev.debug.newconsole.PydevConsole.<init>(PydevConsole.java:81)
+	at org.python.pydev.debug.newconsole.PydevConsoleFactory.connectDebugger(PydevConsoleFactory.java:168)
+	at org.python.pydev.debug.newconsole.PydevConsoleFactory.access$1(PydevConsoleFactory.java:162)
+	at org.python.pydev.debug.newconsole.PydevConsoleFactory$1.run(PydevConsoleFactory.java:92)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 14:41:15.396
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 14:41:15.396
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-05 14:41:44.829 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 14:41:50.765
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-05 14:42:11.585
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-05 14:42:11.585
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@d56028,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c56fff,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 14:42:53.167
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-05 14:42:53.167
+!MESSAGE Resource '/toastmaster' does not exist.
+!SESSION 2015-08-05 14:44:40.389 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 14:44:47.065
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 14:44:47.395
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-05 14:44:47.395
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-05 14:45:08.766
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-05 14:45:08.766
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3405a1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2bfd4b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2015-08-05 15:32:26.212
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete 'C:\Users\jyqi\mysite\itoastmaster\db.sqlite3'.
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:131)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:304)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFile(ResourceTree.java:785)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1973)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete: C:\Users\jyqi\mysite\itoastmaster\db.sqlite3.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2015-08-05 15:32:26.212
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2015-08-05 15:32:26.212
+!MESSAGE Could not delete 'C:\Users\jyqi\mysite\itoastmaster\db.sqlite3'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:131)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:304)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFile(ResourceTree.java:785)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1973)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete: C:\Users\jyqi\mysite\itoastmaster\db.sqlite3.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2015-08-05 15:32:26.212
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2015-08-05 15:32:26.212
+!MESSAGE Could not delete: C:\Users\jyqi\mysite\itoastmaster\db.sqlite3.
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2015-08-05 15:32:34.413
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete 'C:\Users\jyqi\mysite\itoastmaster\db.sqlite3'.
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:131)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:304)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFile(ResourceTree.java:785)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1973)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete: C:\Users\jyqi\mysite\itoastmaster\db.sqlite3.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2015-08-05 15:32:34.423
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2015-08-05 15:32:34.423
+!MESSAGE Could not delete 'C:\Users\jyqi\mysite\itoastmaster\db.sqlite3'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:131)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:304)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFile(ResourceTree.java:785)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1973)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete: C:\Users\jyqi\mysite\itoastmaster\db.sqlite3.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2015-08-05 15:32:34.423
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2015-08-05 15:32:34.423
+!MESSAGE Could not delete: C:\Users\jyqi\mysite\itoastmaster\db.sqlite3.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 15:32:42.234
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 15:32:42.234
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 15:32:42.764
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-05 15:33:35.960 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 15:33:43.071
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-05 15:35:12.803
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-05 15:35:12.803
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@b1df49,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1894a6f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 16:32:46.155
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-05 16:32:46.155
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 17:02:07.672
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 17:02:07.672
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 17:02:08.134
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 17:02:08.625
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 17:02:09.135
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 17:02:09.686
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 17:02:10.169
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-05 17:02:09.979 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 17:02:15.971
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-05 17:04:35.012
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-05 17:04:35.012
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ba890e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4cb483,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 17:04:35.319
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-05 17:04:35.329
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 17:40:29.138
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 17:40:29.138
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-05 17:50:23.120 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 17:50:28.580
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-05 17:50:36.972
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-05 17:50:36.972
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f6cac,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18a8584,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 17:50:37.300
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-05 17:50:37.300
+!MESSAGE Resource '/toastmaster' does not exist.
+!SESSION 2015-08-05 19:42:31.855 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 19:42:40.782
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-05 19:55:26.712
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-05 19:55:26.712
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e67a18,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1289e90,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 20:20:55.390
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-05 20:21:00.337 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-05 20:21:06.482
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-05 20:23:50.812
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-05 20:23:50.812
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10f8a05,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@198ac31,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 21:17:47.864
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-05 21:17:47.865
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-05 23:46:14.451
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 23:46:14.454
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 23:46:14.948
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-05 23:46:15.448
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-06 19:02:37.460 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-06 19:02:44.652
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-06 19:03:13.200
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-06 19:03:13.200
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b162f2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f3991e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-06 20:14:40.734
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-06 20:14:48.974 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-06 20:14:54.292
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-08-07 16:14:57.706 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-08-07 16:14:59.422
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-07 16:15:03.774
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-07 17:15:19.917
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 17:15:19.917
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-07 17:15:21.683 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-07 17:15:27.190
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-07 17:24:14.992
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 17:24:14.992
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-07 17:24:18.396 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-07 17:24:24.184
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-07 17:39:40.613
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 17:39:40.613
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-07 19:32:05.890 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-07 19:32:12.598
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-07 20:19:15.001
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-07 20:19:15.001
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@b5a810,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@781ebb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-07 20:22:12.656
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-07 20:22:12.656
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-07 21:35:34.692
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 21:35:34.693
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 21:35:35.193
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 21:35:35.243
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-07 21:35:38.778 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-07 21:35:45.480
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-07 21:41:18.691
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-07 21:41:18.691
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1cdf13e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ede349,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 21:44:56.821
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-07 21:44:59.464 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-07 21:45:05.669
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-07 21:51:22.560
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-07 21:51:22.561
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1fad0c7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@fb8317,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 22:00:46.751
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 22:00:46.779
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-07 22:00:49.377 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-07 22:00:55.941
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-07 22:02:04.790
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-07 22:02:04.790
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f497b1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@186a656,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+!SESSION 2015-08-07 22:44:58.843 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-07 22:45:04.897
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-07 22:45:26.731
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-07 22:45:26.731
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@100963e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13d14e3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-07 23:44:10.879
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 23:44:10.881
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-07 23:44:10.881
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-08 00:29:36.049 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-08 00:29:43.871
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-08 00:34:49.096
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-08 00:34:49.096
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13a6091,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@14d9bda,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-08 01:02:33.291
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-08 01:02:33.293
+!MESSAGE Resource '/toastmaster' does not exist.
+!SESSION 2015-08-08 08:50:22.896 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-08-08 08:50:25.033
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-08 08:50:30.368
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-08 09:58:12.009
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-08 09:58:12.009
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4e5c05,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ce4e9d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-08 11:12:03.372
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-08 11:12:03.374
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-08 12:09:00.634
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 12:09:00.635
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 12:09:01.102
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 12:09:01.611
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-08 12:09:03.201 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-08 12:09:10.331
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-08 12:09:25.258
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-08 12:09:25.258
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18ed8f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@fb7450,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-08 12:53:09.236
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 12:53:09.241
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 12:53:09.731
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 12:53:09.755
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-08 12:53:21.782 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-08 12:53:30.691
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-08 12:54:02.564
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-08 12:54:02.564
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@26eee6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e1c797,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-08 13:11:10.737
+!MESSAGE The encoding found: >>string-escape<< on C:\Python27\Lib\test\bad_coding3.py is not a valid encoding.
+!STACK 0
+java.io.UnsupportedEncodingException: The encoding found: >>string-escape<< on C:\Python27\Lib\test\bad_coding3.py is not a valid encoding.
+	at org.python.pydev.shared_core.io.FileUtils.getValidEncoding(FileUtils.java:670)
+	at org.python.pydev.shared_core.io.FileUtils.getPythonFileEncoding(FileUtils.java:631)
+	at org.python.pydev.shared_core.io.FileUtils.getPythonFileEncoding(FileUtils.java:701)
+	at org.python.pydev.core.FileUtilsFileBuffer.getCustomReturnFromFile(FileUtilsFileBuffer.java:172)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalTokensInfo.addAstInfo(AbstractAdditionalTokensInfo.java:280)
+	at com.python.pydev.analysis.additionalinfo.AbstractAdditionalInfoWithBuild.restoreInfoForModuleManager(AbstractAdditionalInfoWithBuild.java:254)
+	at com.python.pydev.analysis.additionalinfo.AdditionalSystemInterpreterInfo.recreateAllInfo(AdditionalSystemInterpreterInfo.java:158)
+	at com.python.pydev.analysis.additionalinfo.builders.InterpreterObserver.notifyDefaultPythonpathRestored(InterpreterObserver.java:35)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.restorePythopathForInterpreters(AbstractInterpreterManager.java:700)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:634)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.applySelectedChangesToInterpreterInfosPythonpath(SynchSystemModulesManager.java:219)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$JobApplyChanges.run(SynchSystemModulesManager.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-08 14:27:17.857
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 14:27:17.858
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 14:27:18.395
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 14:27:18.860
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 14:27:19.472
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 14:27:19.971
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-08 17:07:28.193 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-08 17:07:35.149
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-08 17:50:28.220
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-08 17:50:28.220
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@c88d71,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@57512b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-08 20:04:04.967
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-08 20:04:04.968
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-08 20:30:53.948
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 20:30:53.949
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 20:30:54.434
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-08 20:38:34.434 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-08 20:38:41.774
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-08 20:38:53.709
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-08 20:38:53.709
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@401b81,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@11d1463,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-08 21:01:27.428
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-08 21:01:27.429
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-08 23:34:38.919
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 23:34:38.921
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 23:34:39.406
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 23:34:39.876
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 23:34:40.423
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 23:34:40.929
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-08 23:34:41.429
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-08 23:35:15.025 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-08 23:35:23.292
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-08-09 19:37:58.352 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-09 19:38:07.465
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-09 19:42:03.429
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-09 19:42:03.429
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3cb756,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@97aae1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-09 22:18:27.783
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-09 22:18:27.790
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-10 19:54:28.905 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-10 19:54:36.144
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-10 20:54:22.818
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-10 20:54:22.818
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f7a2c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@bcaa34,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-10 23:16:08.860
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-11 10:49:47.425 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-11 10:49:54.125
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-11 10:50:02.706
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-11 10:50:02.706
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13293c8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@f1d799,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-11 14:35:40.520
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-11 14:35:40.524
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-11 17:35:58.329
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-11 17:35:58.339
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-11 17:35:58.352
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-11 19:21:33.019 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-11 19:21:40.226
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-11 19:22:44.000
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-11 19:22:44.000
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10b8c2a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@19c2387,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-11 23:11:37.690
+!MESSAGE Resource '/toastmaster' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/toastmaster' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Project.hasNature(Project.java:584)
+	at org.python.pydev.editor.PyEditTitle.isDjangoHandledModule(PyEditTitle.java:715)
+	at org.python.pydev.editor.PyEditTitle.getPartNameInLevel(PyEditTitle.java:663)
+	at org.python.pydev.editor.PyEditTitle.initializeTitle(PyEditTitle.java:415)
+	at org.python.pydev.editor.PyEditTitle.access$4(PyEditTitle.java:369)
+	at org.python.pydev.editor.PyEditTitle$4.run(PyEditTitle.java:301)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-08-11 23:11:37.691
+!MESSAGE Resource '/toastmaster' does not exist.
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-08-11 23:45:45.512
+!MESSAGE Output Stream is closed
+!STACK 0
+java.io.IOException: Output Stream is closed
+	at org.eclipse.ui.console.IOConsoleOutputStream.encodedWrite(IOConsoleOutputStream.java:227)
+	at org.eclipse.ui.console.IOConsoleOutputStream.write(IOConsoleOutputStream.java:222)
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-11 23:45:45.513
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-11 23:45:45.988
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-11 23:45:46.529
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-11 23:45:47.031
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:183)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-11 23:51:57.056 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-11 23:52:04.004
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-11 23:52:09.867
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-11 23:52:09.867
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1bb86ac,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1bf2602,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+!SESSION 2015-08-12 09:55:40.424 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-12 09:55:48.895
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-12 09:58:30.482
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-12 09:58:30.482
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ed434d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1f10967,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-12 10:02:55.860
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-12 10:05:39.638 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-12 10:05:46.336
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface 2 0 2015-08-12 10:06:00.367
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-08-12 10:06:00.367
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
+		Python Show Global Tokens (Global),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@16944cd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	com.python.pydev.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
+		Python Show Global Tokens (Editor),
+		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@10a935f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.python.pydev.ui.editor.scope,,,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-08-12 10:07:29.580
+!MESSAGE An internal error occurred during: "Refresh on finish".
+!STACK 0
+java.lang.NullPointerException
+	at org.python.pydev.django.debug.ui.actions.DjangoAction$1.run(DjangoAction.java:172)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-08-12 13:27:18.200 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-12 13:27:25.111
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-08-12 13:30:06.526
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2015-08-12 13:30:06.526
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE Software being installed: Java Persistence API Tools 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC (org.eclipse.jpt.feature.feature.group 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.M20130911-1000 (org.eclipse.platform.ide 4.3.1.M20130911-1000)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.526
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE Welcome Framework 3.2.201.v20080702_34x (org.eclipse.ui.intro 3.2.201.v20080702_34x)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE Welcome Framework 3.4.200.v20130326-1254 (org.eclipse.ui.intro 3.4.200.v20130326-1254)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.526
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE From: Java Persistence API Tools 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC (org.eclipse.jpt.feature.feature.group 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE To: org.eclipse.platform.feature.group [3.4.0,4.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.526
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE From: Eclipse Platform 3.4.2.R342_v20090122-9I96EiWElHi8lheoJKJIvhM3JfVsYbRrgVIWL (org.eclipse.platform.feature.group 3.4.2.R342_v20090122-9I96EiWElHi8lheoJKJIvhM3JfVsYbRrgVIWL)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE To: org.eclipse.ui.intro [3.2.201.v20080702_34x]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.526
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE From: Eclipse Platform 4.3.1.v20130911-1000 (org.eclipse.platform.feature.group 4.3.1.v20130911-1000)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE To: org.eclipse.ui.intro [3.4.200.v20130326-1254]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.526
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE From: Eclipse Platform 4.3.1.M20130911-1000 (org.eclipse.platform.ide 4.3.1.M20130911-1000)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20130911-1000]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-08-12 13:30:06.526
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2015-08-12 13:30:06.526
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE Software being installed: Java Persistence API Tools 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC (org.eclipse.jpt.feature.feature.group 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.M20130911-1000 (org.eclipse.platform.ide 4.3.1.M20130911-1000)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.526
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE Welcome Framework 3.2.201.v20080702_34x (org.eclipse.ui.intro 3.2.201.v20080702_34x)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE Welcome Framework 3.4.200.v20130326-1254 (org.eclipse.ui.intro 3.4.200.v20130326-1254)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.526
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE From: Java Persistence API Tools 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC (org.eclipse.jpt.feature.feature.group 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE To: org.eclipse.platform.feature.group [3.4.0,4.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.526
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE From: Eclipse Platform 3.4.2.R342_v20090122-9I96EiWElHi8lheoJKJIvhM3JfVsYbRrgVIWL (org.eclipse.platform.feature.group 3.4.2.R342_v20090122-9I96EiWElHi8lheoJKJIvhM3JfVsYbRrgVIWL)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE To: org.eclipse.ui.intro [3.2.201.v20080702_34x]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.526
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE From: Eclipse Platform 4.3.1.v20130911-1000 (org.eclipse.platform.feature.group 4.3.1.v20130911-1000)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE To: org.eclipse.ui.intro [3.4.200.v20130326-1254]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.526
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE From: Eclipse Platform 4.3.1.M20130911-1000 (org.eclipse.platform.ide 4.3.1.M20130911-1000)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.526
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20130911-1000]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-08-12 13:30:06.541
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2015-08-12 13:30:06.541
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE Software being installed: Java Persistence API Tools 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC (org.eclipse.jpt.feature.feature.group 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.M20130911-1000 (org.eclipse.platform.ide 4.3.1.M20130911-1000)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.541
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE Welcome Framework 3.2.201.v20080702_34x (org.eclipse.ui.intro 3.2.201.v20080702_34x)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE Welcome Framework 3.4.200.v20130326-1254 (org.eclipse.ui.intro 3.4.200.v20130326-1254)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE From: Java Persistence API Tools 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC (org.eclipse.jpt.feature.feature.group 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE To: org.eclipse.platform.feature.group [3.4.0,4.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE From: Eclipse Platform 3.4.2.R342_v20090122-9I96EiWElHi8lheoJKJIvhM3JfVsYbRrgVIWL (org.eclipse.platform.feature.group 3.4.2.R342_v20090122-9I96EiWElHi8lheoJKJIvhM3JfVsYbRrgVIWL)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE To: org.eclipse.ui.intro [3.2.201.v20080702_34x]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE From: Eclipse Platform 4.3.1.v20130911-1000 (org.eclipse.platform.feature.group 4.3.1.v20130911-1000)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE To: org.eclipse.ui.intro [3.4.200.v20130326-1254]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE From: Eclipse Platform 4.3.1.M20130911-1000 (org.eclipse.platform.ide 4.3.1.M20130911-1000)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20130911-1000]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2015-08-12 13:30:06.541
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10054 2015-08-12 13:30:06.541
+!MESSAGE Cannot complete the install because of a conflicting dependency.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE Software being installed: Java Persistence API Tools 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC (org.eclipse.jpt.feature.feature.group 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE Software currently installed: Eclipse Platform 4.3.1.M20130911-1000 (org.eclipse.platform.ide 4.3.1.M20130911-1000)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.541
+!MESSAGE Only one of the following can be installed at once: 
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE Welcome Framework 3.2.201.v20080702_34x (org.eclipse.ui.intro 3.2.201.v20080702_34x)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE Welcome Framework 3.4.200.v20130326-1254 (org.eclipse.ui.intro 3.4.200.v20130326-1254)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE From: Java Persistence API Tools 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC (org.eclipse.jpt.feature.feature.group 2.0.103.v200901160200-793DyCYQCD5FVHgCMCC)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE To: org.eclipse.platform.feature.group [3.4.0,4.0.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE From: Eclipse Platform 3.4.2.R342_v20090122-9I96EiWElHi8lheoJKJIvhM3JfVsYbRrgVIWL (org.eclipse.platform.feature.group 3.4.2.R342_v20090122-9I96EiWElHi8lheoJKJIvhM3JfVsYbRrgVIWL)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE To: org.eclipse.ui.intro [3.2.201.v20080702_34x]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE From: Eclipse Platform 4.3.1.v20130911-1000 (org.eclipse.platform.feature.group 4.3.1.v20130911-1000)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE To: org.eclipse.ui.intro [3.4.200.v20130326-1254]
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2015-08-12 13:30:06.541
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE From: Eclipse Platform 4.3.1.M20130911-1000 (org.eclipse.platform.ide 4.3.1.M20130911-1000)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2015-08-12 13:30:06.541
+!MESSAGE To: org.eclipse.platform.feature.group [4.3.1.v20130911-1000]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10052 2015-08-12 13:31:27.097
+!MESSAGE Cannot continue the operation.  There is another install operation in progress.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10052 2015-08-12 13:31:27.112
+!MESSAGE Cannot continue the operation.  There is another install operation in progress.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10052 2015-08-12 13:31:48.375
+!MESSAGE Cannot continue the operation.  There is another install operation in progress.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10052 2015-08-12 13:31:48.391
+!MESSAGE Cannot continue the operation.  There is another install operation in progress.
+!SESSION 2015-08-12 13:34:13.907 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.8.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-08-12 13:34:28.041
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\jyqi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

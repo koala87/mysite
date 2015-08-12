@@ -1,0 +1,20 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+from manual.models import Manual_Kind, Manual, Objective
+
+def cc_manual(request):
+    
+    kind = Manual_Kind.objects.filter(kind="CC")['kind']
+    content = Manual.objects.filter(kind=kind)
+    return render(request, 'manual/manual.html', {'content' : content, 'obj' : obj})
+
+
+def cl_manual(request):
+    
+    content = Manual.objects.all()
+    
+    obj = Objective.objects.all()
+    
+    return render(request, 'manual/manual.html', {'content' : content, 'obj' : obj})

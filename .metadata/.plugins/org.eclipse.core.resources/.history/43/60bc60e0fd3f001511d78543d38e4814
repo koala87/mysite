@@ -1,0 +1,38 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+{{kind}} Manual
+{% endblock %}
+
+
+{% block content %}
+    
+<div class="panel panel-danger">
+  <div class="panel-heading">
+	{{kind}} Manual
+  </div>
+  <div class="panel-body" id="clubs">
+    {% for i in manual %}
+    <div class="panel-heading"">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_{{i.id}}">
+          <div class="row">
+            <div class="col-xs-1 col-md-1">
+              {{i.level}}
+            </div>
+            <div class="col-xs-11 col-md-11">
+              {{i.title}}
+            </div>
+          </div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse_{{i.id}}" class="accordion-body collapse">
+      <div class="panel-body">
+        <img src="/static/pic/cc/c{{i.id}}.jpg" class="img-rounded" height="600" width="800">
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+        
+{% endblock %}

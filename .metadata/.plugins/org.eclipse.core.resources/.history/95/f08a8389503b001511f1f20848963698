@@ -1,0 +1,10 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+BRAIN TIMER
+{% endblock %}
+
+
+{% block content %}
+video
+{% endblock %}

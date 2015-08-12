@@ -1,0 +1,58 @@
+from django.shortcuts import render
+
+from login.models import UserInfo
+
+def home(request):
+
+    # description, icon, page, disable
+    path = '/static/pic/'
+    modules = [
+        ['Register', 'sign.jpg', 'register', True],
+        ['News', 'news.jpg', 'news', True],
+        ['Members', 'people.jpg', 'member', True],
+        ['Clubs', 'club.jpg', 'club', True],
+        ['CC Manual', 'cc.jpg', 'cc_manual', False],
+        ['CL Manual', 'cl.jpg', 'cl_manual', False],
+        ['Vote Best', 'vote.jpg', 'polls', False],
+        ['Lovebridge', 'love.jpg', 'lovebridge', False],      
+        ['Champion Video', 'video.jpg', 'video', True],
+        
+    ]
+    email = request.session['email']
+    people = UserInfo.objects.filter(email=email)
+    if not email:
+        modules[0] = ['Profile', 'home.jpg', 'register_info', True]
+    
+    for i in modules:
+        i[1] = path + i[1]
+
+    return render(request, 'common/home.html', {'modules' : modules, 'num_list' : range(len(modules))})
+
+
+def mine(request):
+    
+    name = 'Anybody'
+    if 'email' in request.session:
+        name = request.session['email']
+    return render(request, 'common/mine_profile.html', {'name' : name})
+
+def mine_words(request):
+
+    return render(request, 'common/mine_words.html')
+
+def mine_blog(request):
+    
+    return render(request, 'common/mine_blog.html')
+
+def mine_photo(request):
+    
+    return render(request, 'common/mine_photo.html')
+
+def mine_friends(request):
+    
+    return render(request, 'common/mine_friends.html')
+
+
+def about(request):
+    
+    return render(request, 'common/about.html')

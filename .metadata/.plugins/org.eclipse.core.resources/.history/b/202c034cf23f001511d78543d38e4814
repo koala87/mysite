@@ -1,0 +1,108 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+CLUB
+{% endblock %}
+
+{% block script %}
+
+	function sort_by_name(){
+		clubs = document.getElementById("clubs");
+	}
+	
+	function sort_by_city(){
+	}
+	
+	function sort_by_week(){
+	}
+	
+{% endblock %}
+
+{% block content %}
+
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-xs-6 col-md-6">
+        <a href="#">Club</a>
+      </div>
+      <div class="col-xs-3 col-md-3">
+        <a href="#">City</a>
+      </div>
+      <div class="col-xs-3 col-md-3">
+        <a href="#">Week</a>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body" id="clubs">
+    {% for i in clubs %}
+    <div>
+    <div class="panel-heading"">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_{{i.id}}">
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              {{i.name}}
+            </div>
+            <div class="col-xs-3 col-md-3">
+              {{i.city_id}}
+            </div>
+            <div class="col-xs-3 col-md-3">
+              {{i.week}}
+            </div>
+          </div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse_{{i.id}}" class="accordion-body collapse">
+      <div class="panel-body">
+        <table>
+          <tr>
+            <td>Time</td>
+            <td>{{i.time}}</td>
+          </tr>
+          <tr>
+            <td>Addr</td>
+            <td>{{i.addr}}</td>
+          </tr>
+          <tr>
+            <td>Website</td>
+            <td>{{i.website}}</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>{{i.phone}}</d>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{i.email}}<td>
+          </tr>
+        </table>
+      </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  
+  
+<nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% for i in pages %}
+        <li><a href="#">{{i}}</a></li>
+    {% endfor %}
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+ 
+</div>
+
+{% endblock %}

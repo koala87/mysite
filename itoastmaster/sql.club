@@ -1,0 +1,7 @@
+BEGIN;
+--
+-- Create model Club
+--
+CREATE TABLE "club_club" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "name" varchar(64) NOT NULL, "time" text NULL, "week" integer NULL, "addr" text NULL, "email" varchar(254) NULL, "phone" varchar(64) NULL, "website" text NULL, "geo_longitude" real NULL, "geo_latitude" real NULL, "country_id" integer NULL, "zones_id" integer NULL, "city_id" integer NULL);
+
+COMMIT;

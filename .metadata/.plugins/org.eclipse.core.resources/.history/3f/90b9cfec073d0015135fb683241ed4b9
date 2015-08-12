@@ -1,0 +1,71 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+CC/CL M
+{% endblock %}
+
+
+{% block content %}
+
+<table class="table table-bordered">
+  <thead>
+    <th>Level</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Objective</th>
+    <th>Time</th>
+    </thead>
+    <tbody id="vote_body">
+  </thead>
+  <tbody>
+    {% for i in content %}
+      <tr>
+      	<td>C {{forlopp.counter}}</td>
+      	<td>{{i.title}}</td>
+      	<td>{{i.description}}</td>
+      	<td>
+          <ul>
+          {% for j in obj %}
+            <li>{{j}}</li>
+          {% endfor %}
+          </ul>
+      	</td>
+      	<td>{{i.ltime}} to {{i.mtime}} mins</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+        
+        
+        
+<div class="panel panel-danger">
+  <div class="panel-heading">Clubs</div>
+  <div class="panel-body">
+  <table class="table table-bordered">
+    <thead>
+      <th>Title</th>
+      <th>Addr</th>
+      <th>Time</th>
+      <th>Contact</th>
+      <th>Tel.</th>
+      <th>Email</th>
+      <th>Description</th>
+    </thead>
+    <tbody>
+      {% for i in content %}
+        <tr>
+          <td>{{club.name}}</td>
+          <td>{{club.addr}}</td>
+          <td>{{club.time}}</td>
+          <td>{{club.people}}</td>
+          <td>{{club.tel}}</td>
+          <td>{{club.email}}</td>
+          <td>{{club.description}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+        
+{% endblock %}

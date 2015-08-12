@@ -1,0 +1,16 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+LOGOUT
+{% endblock %}
+
+<% block script %>
+
+<% endblock %>
+
+
+{% block content %}
+
+<h4>Logout Successfully</h4>
+
+{% endblock %}

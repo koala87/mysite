@@ -1,0 +1,93 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+REGISTER
+{% endblock %}
+
+{% block script %}
+	function myload() {
+      var birth_year = document.getElementById("birth_year");
+      for (var i=1950;i<2015;i++)
+      {
+        var opt = document.createElement("option");
+        opt.innerHTML = i
+        birth_year.appendChild(opt)
+      }
+      var birth_month = document.getElementById("birth_month");
+      for (var i=1;i<=12;i++)
+      {
+        var opt = document.createElement("option");
+        opt.innerHTML = i
+        birth_month.appendChild(opt)
+      }
+      var birth_day = document.getElementById("birth_day");
+      for (var i=1;i<=31;i++)
+      {
+        var opt = document.createElement("option");
+        opt.innerHTML = i
+        birth_day.appendChild(opt)
+      }
+    }
+{% endblock %}
+
+
+{% block content %}
+
+<form method="POST">
+
+  <table>
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" class="form-control" name="name"></td>
+      </tr>
+      <tr>
+        <td>Sex</td>
+        <td>
+          <label><input type="radio" name="sex" value="male" checked>Male</label>
+          <label><input type="radio" name="sex" value="female">Female</label>
+        </td>
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td>
+          <label><input type="radio" name="status" value="single" checked>Single</label>
+          <label><input type="radio" name="status" value="married">Married</label>
+          <label><input type="radio" name="status" value="love">In Love</label>
+          <label><input type="radio" name="status" value="busy">Busy</label>
+        </td>
+      </tr>
+      <tr>
+        <td>Birth</td>
+        <td>
+          <select class="form-control" name="birth_year" id="birth_year"></select>
+          <select class="form-control" name="birth_month" id="birth_month"></select>
+          <select class="form-control" name="birth_day" id="birth_day"></select>
+      </tr>
+      <tr>
+        <td>Home</td>
+        <td><input type="text">Province<input type="text">City<input type="text">Town</td>
+      </tr>
+      <tr>
+        <td>Club</td>
+        <td><input type="text" class="form-control" name="club"></td>
+      </tr>
+      <tr>
+        <td>Self Intro.</td>
+        <td><textarea class="form-control" rows="3" name="intro"></textarea></td>
+      </tr>
+      <tr>
+        <td>Portrait</td>
+        <td><input type="file" name="portrait"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit" class="btn btn-default">Save</button></td>
+      </td>
+    </tbody>
+  
+  </table>
+  
+</form>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+NEWS
+{% endblock %}
+
+
+{% block content %}
+
+<div class="panel panel-danger">
+  <div class="panel-heading">News {{nid}}</div>
+  <div class="panel-body">
+  <table class="table table-bordered">
+    <thead>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Author</th>
+      <th>Time</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{news.id}}</td>
+        <td>{{news.title}}</td>
+        <td>{{news.content}}</td>
+        <td>{{news.name}}</td>
+        <td>{{news.dt}} {{news.time}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+MEMBER
+{% endblock %}
+
+
+{% block content %}
+
+<table>
+  <tbody>
+	{% for i in people %}
+	  <tr>
+        <td>{{i.name}}</td>
+        <td><img id="portrait" src="/static/pic/upload/{{i.portrait}}" alt="Portrait" width="150"/></td>
+      </tr>
+    {% endfor %}
+  </tbody>    
+</table>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+{{kind}} Manual
+{% endblock %}
+
+
+{% block content %}
+    
+<div class="panel panel-danger">
+  <div class="panel-heading">{{kind}} Manual</div>
+  <div class="panel-body">
+  <table class="table table-bordered">
+    <thead>
+      <th>Level</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Objective</th>
+      <th>Time</th>
+    </thead>
+    <tbody>
+      {% for i in manual %}
+        <tr>
+          <td>{{i.level}}</td>
+          <td>{{i.title}}</td>
+          <td>{{i.description}}</td>
+          <td>
+            <ul>
+              {{% for j in i.obj %}}
+                <li>j</li>
+              {% endfor %}
+            </ul>
+          </td>
+          <td>{{i.ltime}} to {{i.mtime}} mins</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+        
+{% endblock %}

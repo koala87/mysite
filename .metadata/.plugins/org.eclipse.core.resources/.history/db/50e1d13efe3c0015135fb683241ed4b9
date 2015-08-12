@@ -1,0 +1,32 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+ABOUT
+{% endblock %}
+
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-3">
+    
+    <ul class="nav nav-pills nav-stacked">
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Blog</a></li>
+      <li role="presentation"><a href="#">Photo</a></li>
+      <li role="presentation"><a href="#">Friends</a></li>
+      <li role="presentation"><a href="#">Words</a></li>
+    </ul>
+    
+  </div>
+
+  <div class="col-md-9">
+    <div class="panel panel-danger">
+    </div>
+  </div>
+</div>
+
+
+ 
+
+{% endblock %}

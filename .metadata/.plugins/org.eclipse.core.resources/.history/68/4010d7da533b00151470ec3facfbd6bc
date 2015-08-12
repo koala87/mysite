@@ -1,0 +1,10 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+NEWS
+{% endblock %}
+
+
+{% block content %}
+<h1>NEWS: TBD</h1>
+{% endblock %}

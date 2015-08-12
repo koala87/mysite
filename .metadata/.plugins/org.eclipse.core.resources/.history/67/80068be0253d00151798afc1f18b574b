@@ -1,0 +1,52 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+NEWS
+{% endblock %}
+
+
+{% block content %}
+
+  <table>
+    <tbody>
+      <tr>
+        <td>Title</td>
+        <td><input type="text" class="form-control" name="name"></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" class="form-control" name="name"></td>
+      </tr>
+      <tr>
+        <td>Content</td>
+        <td><textarea class="form-control" rows="3" name="intro"></textarea></td>
+      </tr>
+      <tr>
+        <td>Portrait</td>
+        <td><img id="portrait" src="/static/pic/portrait.jpg" alt="Portrait" width="120"/></td>
+      </tr>
+      <tr>
+        <td>Upload</td>
+        <td>
+          <table>
+            <tr>
+              <td>
+                </form><input type="file" id="pic" name="pic ">
+              </td>
+              <td>
+                <button class="btn btn-default" onclick="preview()">Upload</button>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit" class="btn btn-default">Save</button></td>
+      </tr>
+    </tbody>
+  
+  </table>
+  
+
+{% endblock %}

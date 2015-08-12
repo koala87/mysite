@@ -1,0 +1,21 @@
+from __future__ import unicode_literals
+
+from django.db import models
+
+# Create your models here.
+
+class Comment(models.Model):
+    content = models.TextField()
+    dt = models.datetime();
+    name = models.TextField();
+
+class News(models.Model):
+    title = models.TextField()
+    content = models.TextField()
+    dt = models.datetime();
+    comments = models.ManyToManyField(Comment)
+    mtime = models.FloatField()
+    obj = models.ManyToManyField(Objective)
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.title

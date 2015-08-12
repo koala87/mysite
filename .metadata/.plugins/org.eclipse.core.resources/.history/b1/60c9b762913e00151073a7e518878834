@@ -1,0 +1,42 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+REGISTER
+{% endblock %}
+
+{% block content %}
+
+{% csrf_token %}
+<form action="" method="post" enctype="multipart/form-data">  
+  {% csrf_token %}
+ 
+  <div class="form-group">
+    <label class="col-sm-2 name="name" control-label">Email</label>
+    <div class="col-sm-10">
+      email
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 name="name" control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" placeholder="Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Sex</label>
+    <div class="col-sm-10">
+      <label class="radio-inline">
+        <input type="radio" name="sex" value="male" checked> Male
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="sex" value="female"> Female
+      </label>
+    </div>
+  </div>
+  
+  <button type="submit" class="btn btn-default">Submit</button>
+
+ 
+</from>  
+
+{% endblock %}

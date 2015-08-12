@@ -1,0 +1,36 @@
+from django import forms
+
+class RegisterInfo(forms.Form):
+    name = forms.CharField(label=_(u"ÐÕÃû"), max_length=50)
+    portrait = forms.FileField(required=False)
+    club = forms.CharField(max_length=100, required=False)
+    
+    hometown = forms.CharField(max_length=100, required=False)
+
+    status = forms.CharField(max_length=100, required=False)
+    
+    interest = forms.CharField(widget=forms.Textarea, required=False)
+    
+    
+    
+        # basic
+    portrait = forms.CharField(max_length=100, required=False)
+    name = forms.CharField(max_length=100)
+    sex = forms.CharField(max_length=8, required=False)
+    status = forms.CharField(max_length=16, required=False)
+    lovebridge = forms.BooleanField()
+    hometown = forms.CharField(widget=forms.Textarea, required=False)
+    school = forms.CharField(widget=forms.Textarea, required=False)
+    
+    # toastmaster
+    club = forms.CharField(widget=forms.Textarea, required=True)
+    join_dt = forms.CharField(max_length=32, required=False)
+    progress = forms.CharField(widget=forms.Textarea, required=False)
+    positions = forms.CharField(widget=forms.Textarea, required=False)
+    
+    # self
+    interest = forms.CharField(widget=forms.Textarea, required=False)
+    intro = forms.CharField(widget=forms.Textarea, required=False)
+    recent = forms.CharField(widget=forms.Textarea, required=False)
+    
+    

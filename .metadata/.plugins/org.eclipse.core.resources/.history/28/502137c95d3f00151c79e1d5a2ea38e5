@@ -1,0 +1,64 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+Toastmasters HOME
+{% endblock %}
+
+{% block script %}
+
+    function addChoice(cur) {
+      var panel_body = cur.parentNode.parentNode.childNodes[1];
+      var choices = panel_body.childNodes;
+	  var last_choice = choices[choices.length-1];
+	  var new_choice = document.cloneNode(last_choice);
+	  panel_body.appendChild(new_choice);
+	  var 
+    }  
+
+{% endblock %}
+
+{% block content %}
+
+<form role="form" id="vform">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-md-2">
+        <label>Subject</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" class="form-control" placeholder="" name="subject">
+      </div>
+    </div>
+  </div>
+  
+  <div id="vote">
+    <div class="panel" id="vote">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-md-2">
+            <label>Vote</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" class="form-control" placeholder="" name="subject">
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        {% for i in "123"|make_list%}
+        <div class="row">
+          <div class="col-md-2">
+            <label>Choice {{i}}</label>
+          </div>
+          <div class="col-md-10">
+            <input type="text" class="form-control" placeholder="" name="choice">
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <button class="btn btn-default" onclick="addChoice(this)">Add Choice</button>
+    </div><!-end of panel-->
+  </div>
+  
+</form>
+        
+{% endblock %}

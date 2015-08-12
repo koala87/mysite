@@ -1,0 +1,89 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+CLUB
+{% endblock %}
+
+{% block script %}
+
+	function sort_by_name(){
+		clubs = document.getElementById("clubs");
+	}
+	
+	function sort_by_city(){
+		alert("city");
+	}
+	
+	function sort_by_week(){
+		alert("week");
+	}
+{% endblock %}
+
+{% block content %}
+
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-xs-6 col-md-6">
+        <button class="btn-default" onclick="sort_by_name()">Club</button>
+      </div>
+      <div class="col-xs-3 col-md-3">
+        <button class="btn-default" onclick="sort_by_city()">City</button>
+      </div>
+      <div class="col-xs-3 col-md-3">
+        <button class="btn-default" onclick="sort_by_week()">Week</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body" id="clubs">
+    {% for i in clubs %}
+    <div>
+    <div class="panel-heading"">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_{{i.id}}">
+          <div class="row">
+            <div class="col-xs-6 col-md-6">
+              {{i.name}}
+            </div>
+            <div class="col-xs-3 col-md-3">
+              {{i.city_id}}
+            </div>
+            <div class="col-xs-3 col-md-3">
+              {{i.week}}
+            </div>
+          </div>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse_{{i.id}}" class="accordion-body collapse">
+      <div class="panel-body">
+        <table>
+          <tr>
+            <td>Time</td>
+            <td>{{i.time}}</td>
+          </tr>
+          <tr>
+            <td>Addr</td>
+            <td>{{i.addr}}</td>
+          </tr>
+          <tr>
+            <td>Website</td>
+            <td>{{i.website}}</td>
+          </tr>
+          <tr>
+            <td>Phone</td>
+            <td>{{i.phone}}</d>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{i.email}}<td>
+          </tr>
+        </table>
+      </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+VIDEO
+{% endblock %}
+
+
+{% block content %}
+
+{% for v in videos %}
+  <embed width="320" height="240" src="/static/video/dog.mp4" />
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+from __future__ import unicode_literals
+
+from django.db import models
+
+# Create your models here.
+
+class Club(models.Model):
+
+fields = ['name', 'listing_timing', 'address', 'email', 'phone', 'website',
+        'geo_longitude', 'geo_latitude']
+
+    name = models.CharField(max_length=64)
+    time = models.TextField()
+    addr = models.TextField()
+    email = models.EmailField()
+    phone = models.CharField(max_length=64)
+    website = models.TextField()
+    geo_longitude = models.FloatField()
+    geo_latitude = models.FloatField()
+    
+    def __unicode__(self):
+        return self.name

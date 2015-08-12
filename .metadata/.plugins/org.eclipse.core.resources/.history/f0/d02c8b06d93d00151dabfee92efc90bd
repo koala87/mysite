@@ -1,0 +1,12 @@
+from django import forms
+
+class RegisterInfo(forms.Form):
+    name = forms.CharField(max_length=50)
+    portrait = forms.FileField()
+    club = forms.CharField(max_length=100)
+    sex = forms.RadioSelect()
+    hometown = forms.CharField(max_length=100)
+    interest = forms.CharField(max_length=100)
+    interest = forms.CharField(max_length=100)
+    status = forms.CharField(max_length=100)
+    

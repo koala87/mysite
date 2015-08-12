@@ -1,0 +1,10 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+ABOUT
+{% endblock %}
+
+
+{% block content %}
+about
+{% endblock %}

@@ -1,0 +1,8 @@
+from django.contrib import admin
+
+# Register your models here.
+from manual.models import Manual, Objective, Manual_Kind
+
+admin.site.register(Manual)
+
+admin.site.register(Objective)

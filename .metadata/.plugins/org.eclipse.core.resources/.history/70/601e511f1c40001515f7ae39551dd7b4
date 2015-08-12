@@ -1,0 +1,32 @@
+from __future__ import unicode_literals
+
+from django.db import models
+from club.models import Club 
+
+# Create your models here.
+
+class User(models.Model):
+    email = models.CharField(max_length=200)
+    password = models.CharField(max_length=100)
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.email+self.password
+
+
+class UserInfo(models.Model):
+    email = models.CharField(max_length=200)
+    name = models.CharField(max_length=100)
+    sex = models.CharField(max_length=8, blank=True, null=True)
+    status = models.CharField(max_length=16, null=True)
+    club = models.ForeignKey(null=True)
+    join_dt = models.DateField(null=True)
+    
+    school = models.TextField(blank=True)
+    interest = models.TextField(blank=True, null=True)
+    hometown = models.TextField(blank=True, null=True)
+    portrait = models.CharField(max_length=100, blank=True, null=True)
+    
+
+    def __str__(self):              # __unicode__ on Python 2
+        return self.name
+    

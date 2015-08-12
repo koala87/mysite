@@ -1,0 +1,16 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+REGISTER
+{% endblock %}
+
+{% block content %}
+{% csrf_token %}
+<h2>Register Info Successfully</h2>
+<h4>Name:{{name}}</h4>
+<h4>Portrait:{{portrait}}</h4>
+<img id="portrait" src="/static/pic/upload/{{url}}" alt="Portrait" width="150"/>
+
+<a href="/home"><h4>Back</h4></a>
+
+{% endblock %}

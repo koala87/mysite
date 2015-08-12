@@ -1,0 +1,11 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+from club.models import Club
+
+def club(request):
+    
+    clubs = Club.objects.order_by('name')
+    
+    return render(request, 'club/club.html', {'clubs' : clubs[:1]})

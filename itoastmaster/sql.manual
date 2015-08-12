@@ -1,0 +1,18 @@
+BEGIN;
+--
+-- Create model Manual
+--
+CREATE TABLE "manual_manual" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "kind" varchar(10) NOT NULL, "level" integer NOT NULL, "title" text NOT NULL, "description" text NULL, "ltime" real NULL, "mtime" real NULL);
+--
+-- Create model Objective
+--
+CREATE TABLE "manual_objective" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "description" text NOT NULL);
+--
+-- Add field obj to manual
+--
+CREATE TABLE "manual_manual_obj" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "manual_id" integer NOT NULL REFERENCES "manual_manual" ("id"), "objective_id" integer NOT NULL REFERENCES "manual_objective" ("id"));
+CREATE UNIQUE INDEX "manual_manual_obj_manual_id_6dd5ac34_uniq" ON "manual_manual_obj" ("manual_id", "objective_id");
+CREATE INDEX "manual_manual_obj_77575129" ON "manual_manual_obj" ("manual_id");
+CREATE INDEX "manual_manual_obj_818e6528" ON "manual_manual_obj" ("objective_id");
+
+COMMIT;

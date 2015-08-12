@@ -1,0 +1,7 @@
+content-types/org.eclipse.compare.wordDoc/charset=UTF-8
+content-types/org.eclipse.core.runtime.properties/charset=UTF-8
+content-types/org.eclipse.egit.contenttype.gitignore/charset=UTF-8
+content-types/org.eclipse.egit.patch/charset=UTF-8
+content-types/org.python.pydev.pythonfile/charset=UTF-8
+eclipse.preferences.version=1
+line.separator=\n

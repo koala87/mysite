@@ -1,0 +1,22 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+from club.models import Club
+
+def club(request):
+    
+    page = 1
+    sort_by_id = 0
+    
+    id_name = ['name', 'city_id', 'week']
+               
+    if request.method == 'GET':
+        page = 2
+    
+    clubs = Club.objects.order_by('name')
+    
+    total = len(clubs)
+    num = 10
+    
+    return render(request, 'club/club.html', {'clubs' : clubs[0:10]})

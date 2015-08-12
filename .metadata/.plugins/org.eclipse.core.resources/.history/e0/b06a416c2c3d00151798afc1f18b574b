@@ -1,0 +1,38 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+NEWS
+{% endblock %}
+
+
+{% block content %}
+
+<div class="panel panel-danger">
+  <div class="panel-heading">Clubs</div>
+  <div class="panel-body">
+  <table class="table table-bordered">
+    <thead>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Author</th>
+      <th>Time</th>
+      <th>View</th>
+    </thead>
+    <tbody>
+      {% for item in news %}
+        <tr>
+          <td>{{item.id}}</td>
+          <td>{{item.title}}</td>
+          <td>{{item.content}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.dt}} {{club.time}}</td>
+          <td><form><input type="text" name="nid" value="{{item.id}}"><button type="submit">View</button></from></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+
+{% endblock %}

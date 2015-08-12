@@ -1,0 +1,25 @@
+from django.shortcuts import render
+
+# Create your views here.
+
+from news.models import News
+
+def news(request):
+
+    news = News.objects.all()
+        
+    return render(request, 'news/news.html', {'news' : news})
+
+
+def news_new(request):
+
+    news = News.objects.all()
+        
+    return render(request, 'news/news.html', {'news' : news})
+
+
+def news_view(request):
+
+    news = News.objects.all()
+        
+    return render(request, 'news/news.html', {'news' : news})
