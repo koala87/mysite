@@ -73,4 +73,8 @@ body{
   	font-size: smaller;
   	text-align: center; 
   	background:#930000;
-} 
+}
+
+.display_none{
+    display: none;
+}

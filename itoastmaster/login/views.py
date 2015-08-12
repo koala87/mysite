@@ -1,5 +1,208 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
+from django.http import HttpResponse
+from django.template.loader import get_template
+from django.template import RequestContext
+from django.core.context_processors import csrf
+
+from login.models import User
+from login.models import UserInfo
+from login.form import RegisterInfo
+
+
+
 
 def login(request):
 
-    return render(request, 'login/login.html')
+    error = []
+    
+    if request.method == 'POST':
+        
+        if 'email' in request.POST and 'passwd' in request.POST:
+            email = request.POST['email']
+            passwd = request.POST['passwd']
+            
+            if not email:
+                error.append('Email should not be NULL')
+            if not passwd:
+                error.append('Password should not be NULL')
+            
+            if email:
+                user = User.objects.filter(email=email)
+            
+                if user:
+                    user = User.objects.filter(email=email, password=passwd)
+                    if user:
+                        request.session['email'] = email
+                        return render(request, 'login/login_succ.html', {'title' : '', 'email' : email, 'passwd' : passwd})
+                    else:
+                        error.append('Password is not correct')
+                else:
+                    error.append('%s does not exists!' % email)
+       
+    return render(request, 'login/login.html', {'title' : 'LOGIN', 'error' : error, 'csrf_token' : request.COOKIES['csrftoken']})
+
+
+def logout(request):
+    
+    email = request.session['email']
+    del request.session['email']
+    
+    userInfo = UserInfo.objects.filter(email=email)
+    
+    name = ''
+    if userInfo:
+        name = email
+    return render(request, 'login/logout.html', {'name' : name})
+
+
+def is_valid(str):
+    
+    up_flag = False
+    low_flag = False
+    digit_flag = False
+    oper_flag = False
+    
+    for i in str:
+        if i.isdigit():
+            digit_flag = True
+        elif i.isalpha():
+            if i.islower():
+                low_flag = True
+            elif i.isupper():
+                up_flag = True
+        else:
+            oper_flag = True
+            
+    if up_flag and low_flag and digit_flag and oper_flag:
+        return True
+    else:
+        return False
+    
+    
+def register(request):
+    
+    error = []
+    email = ''
+    passwd = ''
+    passwd1 = ''
+    
+    if request.method == 'POST':
+        
+        data = request.POST
+        
+        if 'email' in data and 'passwd' in data and 'passwd1' in data and (
+            'icode' in data and 'icode_ref' in data):
+            email = data['email']
+            passwd = data['passwd']
+            passwd1 = data['passwd1']
+            error = []
+            import re
+            if not data['email']:
+                error.append('Email should not be NULL')
+            elif not re.match(u'\w+@\w+\.\w+', data['email']):
+                    error.append(['Email is not correct'])
+            
+            user = User.objects.filter(email=email)
+            if user:
+                error.append('Email exists')
+                
+            if data['passwd'] != data['passwd1']:
+                error.append('Twice Password are different')
+            elif len(data['passwd']) < 8:
+                error.append('Length of password should be 8 at least')
+                error.append('Lower and upper character, digit and operator should have one at least')
+            elif len(data['passwd']) > 100:
+                error.append('Length of password should be less than 128')
+            elif not is_valid(data['passwd']):
+                error.append('Lower and upper alpha and digit and operator should have one at least')
+                
+            if not data['icode']:
+                error.append('Identifying code should not be NULL')
+            elif data['icode'].lower() != data['icode_ref'].split('.')[0].lower():
+                error.append('Identifying code is not correct')
+                
+            if not error:
+                email = data['email']
+                password = data['passwd']
+                user = User(email=email, password=password)
+                user.save()
+                
+                userinfo = UserInfo(email=email, name=email)
+                userinfo.save()
+                
+                request.session['email'] = email
+                return render(request, 'login/register_succ.html', {'email' : user.email, 'passwd' : user.password, 'csrf_token' : request.COOKIES['csrftoken']})
+    
+    import os
+    import random
+    
+    ident_pics = os.listdir('static/pic/verify')
+    random.shuffle(ident_pics)
+    
+    return render(request, 'login/register.html', {'title' : 'LOGIN', 'ident_pic' : ident_pics[0], 'error' : error,
+                                                   'email' : email, 'passwd' : passwd, 'passwd1' : passwd1})
+
+
+def handle_uploaded_file(f, pic):
+    
+    destination = open('static/pic/upload/%s' % pic,'wb+')
+    
+    for chunk in f.chunks(): 
+        destination.write(chunk)
+    destination.close()
+     
+     
+def register_info(request):
+
+    email = 'jinyingqi@126.com'
+    form = RegisterInfo(request)
+    people = ''
+    
+    if 'email' in request.session:
+        #email = request.session['email']
+        if email:
+            try:
+                people = UserInfo.objects.get(email=email)
+            except:
+                people = ''
+                
+        if people:
+            form = RegisterInfo(initial={'name' : people.name,
+                                  'sex' : people.sex,
+                                  'status' : people.status,
+                                  'lovebridge' : people.lovebridge,
+                                  'hometown' : people.hometown,
+                                  'school' : people.school,
+                                  'club' : people.club,
+                                  'join_dt' : people.join_dt,
+                                  'progress' : people.progress,
+                                  'positions' : people.positions,
+                                  'interest' : people.interest,
+                                  'self_introduction' : people.self_introduction,
+                                  'word' : people.word})
+         
+    if request.method == 'POST':   
+        #if form.is_valid():
+        if people:
+            data = request.POST
+            people.name = data['name']
+            people.sex = data['sex']
+            people.status = data['status']
+            #people.lovebridge = data['lovebridge']
+            people.hometown = data['hometown']
+            people.school = data['school']
+            #people.club = data['club']
+            #people.join_dt = data['join_dt']
+            people.progress = data['progress']
+            people.positions = data['positions']
+            people.interest = data['interest']
+            people.self_introduction = data['self_introduction']
+            people.word = data['word']
+            
+            
+            people.save()
+        else:
+            return render_to_response("login/register_info_fail.html", {'form' : form})
+
+    return render_to_response("login/register_info.html", {'form' : form, 'csrf_token' : request.COOKIES['csrftoken']})
+

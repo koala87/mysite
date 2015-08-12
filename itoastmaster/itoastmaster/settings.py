@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'polls',
     'login',
     'member',
+    'manual',
+    'tool',
+    'club',
+    'news',
 ]
 
 MIDDLEWARE_CLASSES = [
