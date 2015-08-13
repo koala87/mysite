@@ -1,0 +1,84 @@
+#coding=utf-8
+from django.shortcuts import render
+
+from login.models import UserInfo
+
+def home(request):
+
+    # description, icon, page, disable
+    path = '/static/pic/'
+    modules = [
+        # ['Register', 'sign.jpg', 'register', True],
+        # ['Login', 'enter.jpg', 'login', True],
+        ['主页', 'home.jpg', 'register_info', True],
+        ['新闻', 'news.jpg', 'news', True],
+        ['俱乐部', 'club.jpg', 'club', True],
+        ['会员', 'people.jpg', 'member', True],
+        ['鹊桥', 'love.jpg', 'lovebridge', True],
+        ['CC手册', 'cc.jpg', 'cc_manual', False],
+        ['CL手册', 'cl.jpg', 'cl_manual', False],
+        ['投票最佳', 'vote.jpg', 'polls', False],
+        ['智能计时器', 'timer.jpg', 'timer', False],
+        ['视频', 'video.jpg', 'video', True],
+        ['培训报名', 'sign.jpg', 'training', True],
+        ['文档资料', 'material.jpg', 'material', True],
+        
+    ]
+    
+    if False:
+        email = ''
+        if 'email' in request.session:
+            email = request.session['email']
+        
+        if email:
+            people = UserInfo.objects.filter(email=email)
+            if people:
+                modules[0] = ['Profile', 'home.jpg', 'register_info', True]
+                del modules[1]
+                modules.append(['Logout', 'exit.png', 'logout'])
+    
+    for i in modules:
+        i[1] = path + i[1]
+        
+        
+    modules1 = []
+    for i in range(len(modules)):
+        if i % 3 == 0:
+            modules1.append([])
+        modules1[-1].append(modules[i])
+        
+    return render(request, 'common/home.html', {'modules' : modules1})
+
+
+def mine(request):
+    
+    name = 'Anybody'
+    if 'email' in request.session:
+        name = request.session['email']
+    return render(request, 'common/mine_profile.html', {'name' : name})
+
+def mine_words(request):
+
+    return render(request, 'common/mine_words.html')
+
+def mine_blog(request):
+    
+    return render(request, 'common/mine_blog.html')
+
+def mine_photo(request):
+    
+    return render(request, 'common/mine_photo.html')
+
+def mine_friends(request):
+    
+    return render(request, 'common/mine_friends.html')
+
+
+def about(request):
+    
+    if request.method == "GET":
+    	if 'editor1' in request.GET:
+    		page = request.GET['editor1']
+    		return render(request, 'common/test_about.html', {'test' : 'test'})
+    	
+    return render(request, 'common/about.html')

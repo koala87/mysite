@@ -13,12 +13,15 @@ class Comment(models.Model):
 
 
 class News(models.Model):
+    email = models.TextField()
     name = models.TextField()
     title = models.TextField()
-    content = models.TextField()
+    content = models.TextField(blank=True)
     dt = models.DateField();
     time = models.TimeField()
     comments = models.ManyToManyField(Comment)
+    raw_time = models.FloatField()
+    display = models.BooleanField()
 
     
     def __str__(self):              # __unicode__ on Python 2

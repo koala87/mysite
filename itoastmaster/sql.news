@@ -1,0 +1,15 @@
+BEGIN;
+--
+-- Create model Comment
+--
+CREATE TABLE "news_comment" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "content" text NOT NULL, "dt" date NOT NULL, "time" time NOT NULL, "name" text NOT NULL, "secrect" bool NOT NULL);
+--
+-- Create model News
+--
+CREATE TABLE "news_news" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "email" text NOT NULL, "name" text NOT NULL, "title" text NOT NULL, "content" text NOT NULL, "dt" date NOT NULL, "time" time NOT NULL, "raw_time" real NOT NULL, "display" bool NOT NULL);
+CREATE TABLE "news_news_comments" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "news_id" integer NOT NULL REFERENCES "news_news" ("id"), "comment_id" integer NOT NULL REFERENCES "news_comment" ("id"));
+CREATE UNIQUE INDEX "news_news_comments_news_id_94f9e42b_uniq" ON "news_news_comments" ("news_id", "comment_id");
+CREATE INDEX "news_news_comments_c660c5da" ON "news_news_comments" ("news_id");
+CREATE INDEX "news_news_comments_69b97d17" ON "news_news_comments" ("comment_id");
+
+COMMIT;

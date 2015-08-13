@@ -2,15 +2,18 @@
 from django.shortcuts import render
 
 from login.models import UserInfo
+from itoastmaster.common import get_email
 
 def home(request):
 
     # description, icon, page, disable
     path = '/static/pic/'
+    email = get_email(request)
+    
     modules = [
         # ['Register', 'sign.jpg', 'register', True],
         # ['Login', 'enter.jpg', 'login', True],
-        ['主页', 'home.jpg', 'register_info', True],
+        ['个人', 'home.jpg', 'profile', True],
         ['新闻', 'news.jpg', 'news', True],
         ['俱乐部', 'club.jpg', 'club', True],
         ['会员', 'people.jpg', 'member', True],
@@ -24,30 +27,18 @@ def home(request):
         ['文档资料', 'material.jpg', 'material', True],
         
     ]
-    
-    if False:
-        email = ''
-        if 'email' in request.session:
-            email = request.session['email']
-        
-        if email:
-            people = UserInfo.objects.filter(email=email)
-            if people:
-                modules[0] = ['Profile', 'home.jpg', 'register_info', True]
-                del modules[1]
-                modules.append(['Logout', 'exit.png', 'logout'])
-    
+      
     for i in modules:
         i[1] = path + i[1]
         
-        
+    # row and colum    
     modules1 = []
     for i in range(len(modules)):
         if i % 3 == 0:
             modules1.append([])
         modules1[-1].append(modules[i])
         
-    return render(request, 'common/home.html', {'modules' : modules1})
+    return render(request, 'common/home.html', {'modules' : modules1, 'email' : email})
 
 
 def mine(request):
@@ -74,6 +65,6 @@ def mine_friends(request):
     return render(request, 'common/mine_friends.html')
 
 
-def about(request):
-    
-    return render(request, 'common/about.html')
+def about(request):	
+ 
+    return render(request, 'common/about.html', {'init' : "adfasdfasdfsad", 'email' : get_email(request)})

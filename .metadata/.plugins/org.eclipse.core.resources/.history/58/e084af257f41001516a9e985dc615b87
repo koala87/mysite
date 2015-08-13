@@ -1,0 +1,35 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+ABOUT
+{% endblock %}
+
+
+{% block content %}
+<h1>TBD</h1>
+<h4>Here describe the website and look forward to people who want to join!</h4>
+
+    <div class="adjoined-top">
+		<div class="grid-container">
+			<div class="content grid-width-100">
+				<h1>Congratulations!</h1>
+				<p>
+					If you can see CKEditor below, it means that the installation succeeded.
+					You can now try out your new editor version, see its features, and when you are ready to move on, check some of the <a href="#sample-customize">most useful resources</a> recommended below.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="adjoined-bottom">
+		<div class="grid-container">
+			<div class="grid-width-100">
+				<div id="editor">
+					<h1>Hello world!</h1>
+					<p>I'm an instance of <a href="http://ckeditor.com">CKEditor</a>.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<>
+
+{% endblock %}

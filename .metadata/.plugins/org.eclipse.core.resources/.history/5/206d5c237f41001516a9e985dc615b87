@@ -1,0 +1,11 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+ABOUT
+{% endblock %}
+
+
+{% block content %}
+<h1>TBD</h1>
+<h4>Here describe the website and look forward to people who want to join!</h4>
+{% endblock %}

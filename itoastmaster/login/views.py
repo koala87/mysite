@@ -12,6 +12,8 @@ from club.models import Club
 
 from django.http import HttpResponseRedirect
 
+from itoastmaster.common import get_email
+
 
 def login(request):
 
@@ -32,10 +34,15 @@ def login(request):
                 user = User.objects.filter(email=email)
             
                 if user:
-                    user = User.objects.filter(email=email, password=passwd)
+                    user = User.objects.get(email=email, password=passwd)
                     if user:
                         request.session['email'] = email
-                        return render(request, 'login/login_succ.html', {'title' : '', 'email' : email, 'passwd' : passwd})
+                        request.session['name'] = email
+                        userinfo = UserInfo.objects.get(email=email)
+                        if userinfo.name:
+                            request.session['name'] = userinfo.name
+                        request.session['email'] = email
+                        return HttpResponseRedirect('/home', {'email' : get_email(request)})
                     else:
                         error.append('Password is not correct')
                 else:
@@ -46,15 +53,19 @@ def login(request):
 
 def logout(request):
     
-    email = request.session['email']
-    del request.session['email']
+    from itoastmaster.common import get_email
+    email = get_email(request)
     
-    userInfo = UserInfo.objects.filter(email=email)
+    if email:
+        del request.session['email']
     
-    name = ''
-    if userInfo:
-        name = email
-    return render(request, 'login/logout.html', {'name' : name})
+        userInfo = UserInfo.objects.filter(email=email)
+        name = ''
+        if userInfo:
+            name = email
+            return render(request, 'login/logout.html', {'name' : name})
+    else:
+        return HttpResponseRedirect('/home')
 
 
 def is_valid(str):
@@ -129,10 +140,13 @@ def register(request):
                 user = User(email=email, password=password)
                 user.save()
                 
-                userinfo = UserInfo(email=email, name=email)
+                userinfo = UserInfo(email=email, name=email, lovebridge=True)
                 userinfo.save()
                 
+                # It's very important
                 request.session['email'] = email
+                request.session['name'] = email
+                
                 return render(request, 'login/register_succ.html', {'email' : user.email, 'passwd' : user.password, 'csrf_token' : request.COOKIES['csrftoken']})
     
     import os
@@ -166,13 +180,13 @@ def register_info(request):
     error = []
     people = ''
     
-    if 'email' in request.session:
-        email = request.session['email']
-        if email:
-            try:
-                people = UserInfo.objects.get(email=email)
-            except:
-                error.append('no UserInfo for %s' % email)
+    email = get_email(request)
+        
+    if email:
+        try:
+            people = UserInfo.objects.get(email=email)
+        except:
+            error.append('no UserInfo for %s' % email)
 
     if error:
         return render_to_response("login/register_info_fail.html", {'error' : error})   
@@ -182,25 +196,34 @@ def register_info(request):
          
     if request.method == 'POST':   
         data = request.POST
-        if 'name' in data:
-            people.name = request.POST['name']
-            
-        #people.sex = data['sex']
-        #people.status = data['status']
-        #people.lovebridge = data['lovebridge']
-        #people.hometown = data['hometown']
-        #people.school = data['school']
-        #people.club = data['club']
-        #people.join_dt = data['join_dt']
-        #people.progress = data['progress']
-        #people.positions = data['positions']
-        #people.interest = data['interest']
-        #people.self_introduction = data['self_introduction']
-        #people.word = data['word']
+        
+        people.name = request.POST['name']
+        people.ename = request.POST['ename']    
+        people.sex = data['sex']
+        people.status = data['status']
+        people.lovebridge = data['love']
+        people.hometown = data['home1']
+        people.school = data['school1']
+        myclub = Club.objects.get(id=1)
+        people.club = myclub
+        people.join_dt = '-'.join([data['club_year'], data['club_month'], data['club_day']])
+        people.speech = data['speech']
+        people.leader = data['leader']
+        people.positions = data['positions']
+        people.interest = data['interest']
+        people.self_introduction = data['self_intro']
+        people.word = data['recent']
+        people.phone = data['phone']
+        people.born = '-'.join([data['born_year'], data['born_month'], data['born_day']])
         
         if 'pic' in request.FILES:
             pic_file = request.FILES['pic']
-            pic_name = email + '.jpg'        
+            if people.portrait_id:
+                pic_name = '%s_%d.jpg' % (email, people.portrait_id)
+                people.portrait_id += 1
+            else:
+                pic_name = email + '0.jpg'
+                people.portrait_id = 1        
             handle_uploaded_file(pic_file, pic_name)
             people.portrait = pic_name
                 
@@ -213,4 +236,15 @@ def register_info(request):
                                                            'school' : school,
                                                            'club' : club,
                                                            'people' : people,
-                                                           'name' : 'harry'})
+                                                           'email' : email})
+    
+    
+def profile(request):
+    
+    email = get_email(request)
+    if not email:
+        return HttpResponseRedirect('/login')
+    
+    people = UserInfo.objects.get(email=email)
+    
+    return render_to_response("login/profile.html", {'people' : people, 'email' : email})

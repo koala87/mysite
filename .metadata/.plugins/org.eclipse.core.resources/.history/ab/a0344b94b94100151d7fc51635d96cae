@@ -1,0 +1,15 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+REGISTER
+{% endblock %}
+
+{% block content %}
+
+<h2>祝贺你！{{email}}注册成功！</h2>
+<h4>祝你在土司网获得知识，收获友谊，邂逅爱情，不断成长！嘎嘎！</h4>
+
+<a href="/register_info"><h4>完善个人资料</h4></a>
+<a href="/home"><h4>主页</h4></a>
+
+{% endblock %}

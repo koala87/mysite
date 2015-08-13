@@ -1,0 +1,11 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+BRAIN TIMER
+{% endblock %}
+
+
+{% block content %}
+<h1>TBD</h1>
+<h4>This brain timer will be easy and useful in Toastmaster meeting!</h4>
+{% endblock %}

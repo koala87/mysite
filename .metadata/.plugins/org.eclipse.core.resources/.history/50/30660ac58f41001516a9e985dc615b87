@@ -1,0 +1,41 @@
+#coding=utf-8
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+
+# Create your views here.
+
+from news.models import News
+
+def news(request):
+    
+    news = News.objects.order_by('dt')
+        
+    return render(request, 'news/news.html', {'news' : news})
+
+
+def news_new(request):
+        
+    if request.method == "POST":
+        name = 'Harry'
+        dt = '2011-02-02'
+        time = '18:35'
+        title = request.POST['title']
+        content = request.POST['content']
+        news = News(name=name, title=title, content=content, dt=dt, time=time)
+        news.save()
+        
+        return HttpResponseRedirect('news')
+
+    return render(request, 'news/news_new.html', {'csrf_token' : request.COOKIES['csrftoken']})
+
+
+def news_view(request, pid):
+  
+    try:
+        id = int(pid)
+    except:
+        id = 1
+        
+    news = News.objects.get(id=id)
+    
+    return render(request, 'news/news_view.html', {'news' : news, 'csrf_token' : request.COOKIES['csrftoken']})

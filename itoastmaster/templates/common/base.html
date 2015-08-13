@@ -11,6 +11,7 @@
 	
 	<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=EA647352914ed58dfab26eb565c71f8e&v=1.0"></script> 
 	
+	<script src="/static/ckeditor/ckeditor.js"></script>
 	<script type="text/javascript">{% block script%} {% endblock %}</script>
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.css" rel="stylesheet">
@@ -29,26 +30,18 @@
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="/polls" class="dropdown-toggle" data-toggle="dropdown">吐司网<b class="caret"></b></a>
+              {% if email %}
               <ul class="dropdown-menu">
-                <li><a href="/home">主页</a></li>
                 <li><a href="/register_info">修改个人资料</a></li>
-                <li><a href="/register_info">个人</a></li>
-                <li><a href="/news">新闻</a></li>
-                <li><a href="/club">俱乐部</a></li>
-                <li><a href="/member">会员</a></li>
-                <li><a href="/lovebridge">鹊桥</a></li>
-                <li><a href="/cc_manual">CC手册</a></li>
-                <li><a href="/cl_manual">CL手册</a></li>
-                <li><a href="/video">视频</a></li>
-                <li><a href="/training">培训报名</a></li>
-                <li><a href="/material">文档资料</a></li>
-                <li><a href="/timer">智能计时器</a></li>
-                <li><a href="/about">关于</a></li>
+                <li><a href="#">修改密码</a></li>
+                <li><a href="/logout">登出</a></li>
+              </ul>
+              {% else %}
+              <ul class="dropdown-menu">
                 <li><a href="/register">注册</a></li>
                 <li><a href="/login">登录</a></li>
-                <li><a href="/logout">登出</a></li>
-
-              </ul> 
+              </ul>
+              {% endif %}
             </li>            
           </ul>
           </a>
@@ -56,11 +49,12 @@
 		  
         <nav class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/register_info">主页</a></li>
+            <li><a href="/home">主页</a></li>
+            <li><a href="/profile">个人</a></li>
             <li><a href="/news">新闻</a></li>
             <li><a href="/club">俱乐部</a></li>
             <li><a href="/member">会员</a></li>
-            <li><a href="/about">关于</a></li>
+            <li><a href="/about">招募</a></li>
             <li class="dropdown">
               <a href="/polls" class="dropdown-toggle" data-toggle="dropdown">工具<b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -71,9 +65,13 @@
           </ul>
                
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/register">注册</a></li>
-            <li><a href="/login">登录</a></li>
-            <li><a href="/logout">登出</a></li>
+          	{% if email %}
+          		<li><a href="/profile">{{email}}</a></li>
+            	<li><a href="/logout">登出</a></li>
+            {% else %}
+            	<li><a href="/register">注册</a></li>
+            	<li><a href="/login">登录</a></li>
+            {% endif %}
           </ul>
           
           </nav>         
@@ -90,8 +88,8 @@
             <img src="/static/pic/logo.jpg" alt="" class="img-rounded" height="100" width="100">
           </div>
           <div class="col-xs-10 col-md-5">
-            <h2>土马人</h2>
-            <h4>交流学习、资源共享平台</h4>
+            <h2>吐司网</h2>
+            <h4><a href="/home">主页</a></h4>
           </div>
           <div class="col-md-3"></div>
         </div>

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from itoastmaster.common import get_email
+
 def vote1(request):
     
     # title, num, multi
@@ -11,7 +13,7 @@ def vote1(request):
     
     print request
     
-    return render(request, 'polls/vote.html', {'items' : items})
+    return render(request, 'polls/vote.html', {'items' : items, 'email' : get_email(request)})
 
 
 

@@ -1,0 +1,45 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+NEWS
+{% endblock %}
+
+
+{% block content %}
+
+<a class="btn btn-primary" href="news_new" role="button">发布新闻</a>
+
+{% for i in news %}
+<p class="text-success">
+  <a href="/news_view/{{i.id}}">
+  <div class="row">
+    <div class="col-md-8">
+      <h4>{{i.title}}</h4>
+    </div>
+    <div class="col-md-1">
+    {{i.name}}
+    </div>
+    <div class="col-md-2">
+    {{i.time}} {{i.dt}}
+    </div>
+    <div class="col-md-1">
+    	{% ifequal i.email email%}
+    		<form>
+    			<input type="text" class="display_none" name="op" value="modify">
+    			<input type="text" class="display_none" name="id" value="{{i.id}}">
+    			<button type="submit" class="btn btn-primary">编辑</button>
+    		</from>
+    		<form>
+    			<input type="text" class="display_none" name="op" value="del">
+    			<input type="text" class="display_none" name="op" value="{{i.id}}">
+    			<button type="submit" class="btn btn-primary">删除</button>
+    		</form>
+    	{% else %}
+    	{% endifequal%}
+    </div>
+  </div>
+  </a>
+</p>
+{% endfor %}
+
+{% endblock %}

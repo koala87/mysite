@@ -8,6 +8,7 @@ club.models|C:\Users\jyqi\mysite\itoastmaster\club\models.py
 club.tests|C:\Users\jyqi\mysite\itoastmaster\club\tests.py
 club.views|C:\Users\jyqi\mysite\itoastmaster\club\views.py
 itoastmaster.__init__|C:\Users\jyqi\mysite\itoastmaster\itoastmaster\__init__.py
+itoastmaster.common|C:\Users\jyqi\mysite\itoastmaster\itoastmaster\common.py
 itoastmaster.settings|C:\Users\jyqi\mysite\itoastmaster\itoastmaster\settings.py
 itoastmaster.urls|C:\Users\jyqi\mysite\itoastmaster\itoastmaster\urls.py
 itoastmaster.views|C:\Users\jyqi\mysite\itoastmaster\itoastmaster\views.py
@@ -21,6 +22,10 @@ login.migrations.0002_auto_20150811_2220|C:\Users\jyqi\mysite\itoastmaster\login
 login.migrations.0003_province|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0003_province.py
 login.migrations.0004_city|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0004_city.py
 login.migrations.0005_province1_school|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0005_province1_school.py
+login.migrations.0006_userinfo_portrait_id|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0006_userinfo_portrait_id.py
+login.migrations.0007_auto_20150813_2148|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0007_auto_20150813_2148.py
+login.migrations.0008_auto_20150813_2152|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0008_auto_20150813_2152.py
+login.migrations.0009_userinfo_ename|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0009_userinfo_ename.py
 login.migrations.__init__|C:\Users\jyqi\mysite\itoastmaster\login\migrations\__init__.py
 login.models|C:\Users\jyqi\mysite\itoastmaster\login\models.py
 login.tests|C:\Users\jyqi\mysite\itoastmaster\login\tests.py

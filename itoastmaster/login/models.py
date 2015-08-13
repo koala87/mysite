@@ -49,17 +49,22 @@ class UserInfo(models.Model):
     
     # basic
     name = models.CharField(max_length=100)
+    ename = models.CharField(max_length=100, blank=True, null=True)
     portrait = models.CharField(max_length=100, blank=True, null=True)
+    portrait_id = models.IntegerField(blank=True, null=True)
     sex = models.CharField(max_length=8, blank=True, null=True)
     status = models.CharField(max_length=16, blank=True, null=True)
     lovebridge = models.BooleanField(blank=True)
     hometown = models.TextField(blank=True, null=True)
     school = models.TextField(blank=True, null=True)
+    born = models.DateField(blank=True, null=True)
+    phone = models.TextField(blank=True, null=True)
     
     # toastmaster
     club = models.ForeignKey(Club, blank=True, null=True)
     join_dt = models.DateField(blank=True, null=True)
-    progress = models.TextField(blank=True, null=True)
+    speech = models.TextField(blank=True, null=True)
+    leader = models.TextField(blank=True, null=True)
     positions = models.TextField(blank=True, null=True)
     
     # self

@@ -1,10 +1,5 @@
-INSTUPlogin.views
-C:\Users\jyqi\mysite\itoastmaster\login\views.py
-INFOS:&&2|1|2|0&&2|3|2|0&&2|4|2|0&&2|5|2|0&&2|6|2|0&&2|7|2|0
-logout=3
-handle_uploaded_file=6
-is_valid=4
-register_info=7
-login=1
-login.views=2
-register=5
+INSTUPvideo.views
+C:\Users\jyqi\mysite\itoastmaster\video\views.py
+INFOS:&&2|1|2|0
+video.views=2
+video=1

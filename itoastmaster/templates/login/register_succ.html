@@ -6,7 +6,12 @@ REGISTER
 
 {% block content %}
 
-<h2>Save Successfully</h2>
-<a href="/register_info"><h4>Back</h4></a>
+<h2>祝贺你！{{email}}注册成功！</h2>
+<h4>祝你在土司网获得源源不断的知识，收获真诚纯粹的友谊，邂逅梦寐以求的爱情，像小树苗一样不断地茁壮成长！</h4>
+
+<label>
+<a href="/register_info"><h4>完善个人资料（推荐）</h4></a>
+<a href="/home"><h4>主页</h4></a>
+</label>
 
 {% endblock %}

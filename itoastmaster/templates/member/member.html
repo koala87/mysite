@@ -11,11 +11,14 @@ MEMBER
   <tbody>
 	{% for i in people %}
 	  <tr>
-        
         <td>
-          <img src="/static/pic/upload/{{i.portrait}}" width="50%"/>
+          {% if i.portrait %}
+            <img src="/static/pic/upload/{{i.portrait}}" width="200"/>
+          {% else %}
+            <img src="/static/pic/head.jpg" width="200"/>
+          {% endif %}
         </td>
-        <td><label>{{i.name}}</label></td>
+        <td><label><a>{{i.name}}</label></a></td>
       </tr>
     {% endfor %}
   </tbody>    

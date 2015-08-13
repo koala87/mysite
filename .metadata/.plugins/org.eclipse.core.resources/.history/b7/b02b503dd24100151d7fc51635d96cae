@@ -1,0 +1,11 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+TRAINING
+{% endblock %}
+
+
+{% block content %}
+<h1>TRAINING:TBD</h1>
+<h4>Here we provide a way to sign in training classes you're interested in at the lower price!</h4>
+{% endblock %}

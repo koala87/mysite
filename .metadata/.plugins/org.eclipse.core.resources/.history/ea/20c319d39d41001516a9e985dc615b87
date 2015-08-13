@@ -1,0 +1,74 @@
+#coding=utf-8
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+
+# Create your views here.
+
+from news.models import News
+
+def news(request):
+    
+    news = News.objects.order_by('raw_time')
+    news = news.reverse()
+    email = ''
+    if 'email' in request.session:
+        email = request.session['email']
+    return render(request, 'news/news.html', {'news' : news,
+                                              'csrf_token' : request.COOKIES['csrftoken'],
+                                              'email' : email})
+
+
+def news_new(request):
+        
+    if request.method == "POST":
+        email = request.session['email']
+        name = request.session['name']
+        import time
+        tmp = time.localtime()
+        raw_time = time.time()
+        dt = '-'.join(['%d' % i for i in tmp[:3]])
+        time = ':'.join(['%d' % i for i in tmp[3:6]])
+        title = request.POST['title']
+        content = request.POST['content']
+        news = News(name=name, title=title, content=content, dt=dt, time=time, raw_time=raw_time, email=email, display=1)
+        news.save()
+        
+        return HttpResponseRedirect('news')
+
+    return render(request, 'news/news_new.html', {'csrf_token' : request.COOKIES['csrftoken']})
+
+
+def news_view(request, pid):
+  
+    try:
+        id = int(pid)
+    except:
+        id = 1
+        
+    news = News.objects.get(id=id)
+    
+    return render(request, 'news/news_view.html', {'news' : news, 'csrf_token' : request.COOKIES['csrftoken']})
+
+
+def news_del(request, pid):
+  
+    try:
+        id = int(pid)
+    except:
+        id = 1
+        
+    news = News.objects.get(id=id)
+    
+    return render(request, 'news/news_view.html', {'news' : news, 'csrf_token' : request.COOKIES['csrftoken']})
+
+
+def news_modify(request, pid):
+  
+    try:
+        id = int(pid)
+    except:
+        id = 1
+        
+    news = News.objects.get(id=id)
+    
+    return render(request, 'news/news_view.html', {'news' : news, 'csrf_token' : request.COOKIES['csrftoken']})

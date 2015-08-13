@@ -16,12 +16,13 @@
     <div class="panel-heading"">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_{{i.id}}">
+          
           <div class="row">
             <div class="col-xs-1 col-md-1">
-              {{i.level}}
+              <p class="text-success">{{i.level}}</p>
             </div>
             <div class="col-xs-11 col-md-11">
-              {{i.title}}
+             <p class="text-success">{{i.title}}</p>
             </div>
           </div>
         </a>
@@ -29,7 +30,7 @@
     </div>
     <div id="collapse_{{i.id}}" class="accordion-body collapse">
       <div class="panel-body">
-        <img src="/static/pic/{{kind}}/{{i.level}}.jpg" class="img-rounded" height="45%" width="90%">
+        <img src="/static/pic/{{kind}}/{{i.level}}.jpg" class="img-rounded" height="50%" width="100%">
       </div>
     </div>
     {% endfor %}

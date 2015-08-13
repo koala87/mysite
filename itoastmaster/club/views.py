@@ -3,6 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 from club.models import Club
+from itoastmaster.common import get_email
 
 def club(request, page):
     
@@ -29,4 +30,5 @@ def club(request, page):
     if right > total:
         right = total
     
-    return render(request, 'club/club.html', {'clubs' : clubs[left:right], 'pages' : range(1,pages)})
+    return render(request, 'club/club.html', {'clubs' : clubs[left:right], 'pages' : range(1,pages),
+                                              'email' : get_email(request)})

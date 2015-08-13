@@ -1,0 +1,30 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+NEWS
+{% endblock %}
+
+
+{% block content %}
+
+<a class="btn btn-primary" href="news_new" role="button">发布新闻</a>
+
+{% for i in news %}
+<p class="text-success">
+  <a href="/news_view/{{i.id}}">
+  <div class="row">
+    <div class="col-md-8">
+      <h4>{{i.title}}</h4>
+    </div>
+    <div class="col-md-2">
+    {{i.name}}
+    </div>
+    <div class="col-md-2">
+    {{i.dt}}{{i.time}}
+    </div>
+  </div>
+  </a>
+</p>
+{% endfor %}
+
+{% endblock %}

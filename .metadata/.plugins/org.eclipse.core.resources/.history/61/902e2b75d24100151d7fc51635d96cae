@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    <title>{% block title %}{% endblock %}</title>
+	
+	<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=EA647352914ed58dfab26eb565c71f8e&v=1.0"></script> 
+	
+	<script src="/static/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript">{% block script%} {% endblock %}</script>
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+     
+  </head>
+
+  <body onload="myload()">
+
+    <div class="div_nav navbar-inverse">
+      <div class="container">
+    	
+        <!-- nav -->
+        <div class="navbar-header">
+          <a href="/home" class="navbar-brand">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="/polls" class="dropdown-toggle" data-toggle="dropdown">吐司网<b class="caret"></b></a>
+              {% if email %}
+              <ul class="dropdown-menu">
+                <li><a href="/register_info">修改个人资料</a></li>
+                <li><a href="/register">修改密码</a></li>
+                <li><a href="/logout">登出</a></li>
+              </ul>
+              {% else %}
+              <ul class="dropdown-menu">
+                <li><a href="/register">注册</a></li>
+                <li><a href="/login">登录</a></li>
+              </ul>
+              {% endif %}
+            </li>            
+          </ul>
+          </a>
+        </div>
+		  
+        <nav class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/home">主页</a></li>
+            <li><a href="/profile">个人</a></li>
+            <li><a href="/news">新闻</a></li>
+            <li><a href="/club">俱乐部</a></li>
+            <li><a href="/member">会员</a></li>
+            <li><a href="/about">关于</a></li>
+            <li class="dropdown">
+              <a href="/polls" class="dropdown-toggle" data-toggle="dropdown">工具<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/polls">投票最佳</a></li>
+                <li><a href="/polls">智能计时器</a></li>
+              </ul> 
+            </li>            
+          </ul>
+               
+          <ul class="nav navbar-nav navbar-right">
+          	{% if email %}
+          		<li><a href="/profile">{{email}}</a></li>
+            	<li><a href="/logout">登出</a></li>
+            {% else %}
+            	<li><a href="/register">注册</a></li>
+            	<li><a href="/login">登录</a></li>
+            {% endif %}
+          </ul>
+          
+          </nav>         
+        
+      </div><!-- end of container  --> 
+	</div><!-- end of div nav  --> 
+
+	
+    <div class="div_head">
+      <div class="container">
+	    <div class="row">
+	      <div class="col-md-3"></div>
+          <div class="col-xs-2 col-md-1">
+            <img src="/static/pic/logo.jpg" alt="" class="img-rounded" height="100" width="100">
+          </div>
+          <div class="col-xs-10 col-md-5">
+            <h2>吐司网</h2>
+            <h4><a href="/home">主页</a></h4>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div><!-- end of container  --> 
+    </div><!-- end of div head  -->
+
+
+    <div class="div_body">
+      <div class="container">
+	    {% block content %}{% endblock %}
+	  </div>
+    </div>
+
+
+    <div class="div_foot">
+      <div class="container">
+      <div class="row">
+	      <div class="col-md-3"></div>
+          <div class="col-xs-1 col-md-1">
+            <label><img src="/static/pic/mine.png" class="img-rounded" height="100" width="100">
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-xs-11 col-md-4">
+            <address>
+  			  <strong>Synopsys, Inc.</strong><br>
+  				14F, Zhaofeng Plaza, Changning Rd. 1027<br>
+  				Shanghai, China 200050<br>
+  				<abbr title="Phone">P:</abbr> (123) 456-7890
+			</address>
+			<address>
+  			<strong>Harry Potter</strong><br>
+  				<a href="mailto:#">jinyingqi@126.com</a>
+			</address>
+          </div>
+          <div class="col-md-3"></div>
+    
+      </div><!-- end of container  -->
+    </div><!-- end of div foot  -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+  </body>
+  {% block extra %}{% endblock %}
+</html>

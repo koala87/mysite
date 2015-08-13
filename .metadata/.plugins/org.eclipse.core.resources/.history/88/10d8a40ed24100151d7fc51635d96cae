@@ -1,0 +1,11 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+BRAIN TIMER
+{% endblock %}
+
+
+{% block content %}
+<h1>不要着急呀！功能正在火急火燎地开发测试中！</h1>
+<h4>愿景：适合土马自己的智能计时器！</h4>
+{% endblock %}

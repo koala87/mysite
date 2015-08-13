@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
+from itoastmaster.common import get_email
 def training(request):
     
-    return render(request, 'training/training.html')
+    return render(request, 'training/training.html', {'email' , get_email(request)})

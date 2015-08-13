@@ -1,0 +1,16 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+NEWS
+{% endblock %}
+
+
+{% block content %}
+
+{{news.title}}
+{{news.name}} {{news.dt}} {{news.time}}
+
+{{news.content|safe}}
+
+
+{% endblock %}
