@@ -1,5 +1,0 @@
-from django import forms
-
-class RegisterInfo(forms.Form):
-    name = forms.CharField(max_length=50)
-    portrait = forms.FileField()

@@ -1,0 +1,273 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+REGISTER
+{% endblock %}
+
+{% block content %}
+
+{% csrf_token %}
+
+
+<form name="form" methord="POST">
+
+{% csrf_token %}
+
+<div>
+  <table class="">
+    <thead>
+      <th></th>
+      <th></th>>
+    </thead>
+    <tbody>
+      <tr>
+        <td>头像</td>
+        <td><img src="/static/pic/head.jpg" class="img-rounded" height="45%" width="90%"></td>
+      </tr>
+      <tr>
+        <td>上传</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>中文名</td>
+        <td><input type="text" class="form-control" name="cname" placeholder="此名字会显示在你的主页上"></td>
+      </tr>
+      <tr>
+        <td>英文名</td>
+        <td><input type="text" class="form-control" name="ename" placeholder="此名字会显示在你的主页上"></td>
+      </tr>
+      <tr>
+        <td>性别</td>
+        <td>
+          <input name="sex" value="male" type="radio" checked>男
+          <input name="sex" value="female" type="radio">女
+		</td>
+      </tr>
+      <tr>
+        <td>出生日期</td>
+        <td><select id="born_year" name="born_year"></select><select id="born_month" name="born_month"></select><select id="born_day" name="born_day"></select></td>
+      </tr>
+      <tr>
+        <td>家乡</td>
+        <td><select id="s1" onChange="redirec(this)"></select><select id="s2"></select></td>
+      </tr>
+      <tr>
+        <td>学校</td>
+        <td><select id="x1" onChange="redirec_school(this)"></select><select id="x2"></select></td>
+      </tr>
+      <tr>
+        <td>状态</td>
+        <td>
+          <select class="form-control" name="status">
+             <option>请选择</option>
+             <option>未婚</option>
+             <option>已婚</option>
+             <option>恋爱中</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>鹊桥板</td>
+        <td>
+          <input name="love" value="in" type="radio" checked>加入
+          <input name="love" value="out" type="radio">不加入
+        </td>
+      </tr>
+      <tr>
+        <td>现在俱乐部</td>
+        <td>
+          <select class="form-control" name="club">
+            <option>请选择</option>
+          {% for i in club %}
+            <option>{{i}}</option>
+          {% endfor %}
+            <option>其他</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>加入时间</td>
+        <td><select id="club_year" name="club_year"></select><select id="club_month" name="club_month"></select><select id="club_day" name="club_day"></select></td>
+      </tr>
+      <tr>
+        <td>担任角色</td>
+        <td>
+           <select class="form-control" name="positions">
+             <option>请选择</option>
+             <option>普通会员</option>
+             <option>主席</option>
+             <option>教育副主席</option>
+             <option>教育副主席助理</option>
+             <option>公关副主席</option>
+             <option>公关副主席助理</option>
+             <option>会员副主席</option>
+             <option>会员副主席助理</option>
+             <option>秘书</option>
+             <option>秘书助理</option>
+             <option>财务官</option>
+             <option>财务官助理</option>
+             <option>接待官</option>
+             <option>接待官助理</option>
+             <option>小区官员</option>
+             <option>中区官员</option>
+             <option>大区官员</option>
+             <option>其他</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>演讲进度</td>
+        <td>
+           <select class="form-control" id="speech" name="speech">
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>领导力进度</td>
+        <td>
+           <select class="form-control" id="leader" name="leader">
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>兴趣爱好</td>
+        <td><textarea rows="3" class="form-control" name="interest" placeholder="完善资料认识有更多相同爱好的小伙伴"></textarea></td>
+      </tr>
+      <tr>
+        <td>最新动态</td>
+        <td><textarea rows="3" class="form-control" name="recent" placeholder="让朋友了解你的最新动态"></textarea></td>
+      </tr>
+      <tr>
+        <td>个人简介</td>
+        <td><textarea rows="5" class="form-control" name="self_intro" placeholder="让大家更加了解你"></textarea></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit class="btn-warning">Save</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</form>
+
+<script>
+var s1 = document.getElementById("s1")
+
+s1.options.add(new Option("请选择", -1))
+{% for i in pro %}
+	var opt = new Option("{{i.name}}", {{i.pid}})
+	s1.options.add(opt)
+{% endfor %}
+s1.options.add(new Option("其他", -2))
+
+var x1 = document.getElementById("x1")
+
+x1.options.add(new Option("请选择", -1))
+{% for i in pro1 %}
+	var opt = new Option("{{i.name}}", {{i.pid}})
+	x1.options.add(opt)
+{% endfor %}
+x1.options.add(new Option("其他", -2))
+
+born_year = document.getElementById("born_year")
+born_month = document.getElementById("born_month")
+born_day = document.getElementById("born_day")
+club_year = document.getElementById("club_year")
+club_month = document.getElementById("club_month")
+club_day = document.getElementById("club_day")
+
+for(var i=1949;i<2016;i++){
+	born_year.options.add(new Option(i, i))
+	club_year.options.add(new Option(i, i))
+}
+
+for(var i=1;i<13;i++){
+	born_month.options.add(new Option(i, i))
+	club_month.options.add(new Option(i, i))
+}
+
+for(var i=1;i<32;i++){
+	born_day.options.add(new Option(i, i))
+	club_day.options.add(new Option(i, i))
+}
+
+speech = document.getElementById("speech")
+leader = document.getElementById("leader")
+
+speech.options.add(new Option("请选择", -1))
+for(var i=1;i<11;i++){
+    var tmp = "C";
+    var num = i.toString();
+    tmp = tmp.concat(num);
+	speech.options.add(new Option(tmp, tmp))
+}
+for(var i=1;i<21;i++){
+	var tmp = "A"
+	var num = i.toString();
+	tmp = tmp.concat(num);
+	speech.options.add(new Option(tmp, tmps))
+}
+speech.options.add(new Option("其他", -2))
+
+leader.options.add(new Option("请选择", -1))
+for(var i=1;i<11;i++){
+    var tmp = "CL";
+    var num = i.toString();
+    tmp = tmp.concat(num);
+	leader.options.add(new Option(tmp, tmp))
+}
+leader.options.add(new Option("其他", -2))
+
+</script>
+
+{% endblock %}
+
+
+
+{% block extra %}
+<script>
+
+function redirec(sel)
+{
+  var x = sel.value
+  
+  var s2 = document.getElementById("s2")
+  var len = s2.options.length
+  for(var i=0;i<len;i++){
+  	s2.options.remove(0)
+  }
+  s2.options.add(new Option("请选择", -1))
+  
+  {% for i in city %}
+    if(x == {{i.pid}}){
+  	  var opt = new Option("{{i.name}}", "0")
+  	  s2.options.add(opt)
+  	}
+  {% endfor %}
+  s2.options.add(new Option("其他", -2))
+}
+
+function redirec_school(sel)
+{
+  var x = sel.value
+  
+  var x2 = document.getElementById("x2")
+  var len = x2.options.length
+  for(var i=0;i<len;i++){
+  	x2.options.remove(0)
+  }
+  x2.options.add(new Option("请选择", -1))
+  
+  {% for i in school %}
+    if(x == {{i.pid}}){
+  	  var opt = new Option("{{i.name}}", "0")
+  	  x2.options.add(opt)
+  	}
+  {% endfor %}
+  x2.options.add(new Option("其他", -2))
+}
+
+
+</script>
+{% endblock %}

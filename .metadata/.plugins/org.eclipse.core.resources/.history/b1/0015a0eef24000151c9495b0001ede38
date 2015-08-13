@@ -1,0 +1,39 @@
+#coding=utf-8
+
+from django.forms import ModelForm
+from django import forms
+
+from login.models import UserInfo
+
+sex_choice = ( 
+     ('', u"---------"), 
+     (1, u"Male"),         
+     (2, u"Female")
+ )
+
+status_choice = ( 
+     ('', u"---------"), 
+     (1, u"Single"),         
+     (2, u"Married"),
+     (3, u'Loving'),
+     (4, u'Available'),
+     (5, u'Not Available'),
+ ) 
+
+class RegisterInfo(ModelForm):
+    
+    name = forms.CharField(label="姓名")
+    sex = forms.ChoiceField(required=False, choices=sex_choice, label="性别")
+    status = forms.ChoiceField(required=False, choices=status_choice, label="状态")
+    join_dt = forms.DateInput()
+    lovebridge = forms.CheckboxInput(label="是否参加鹊桥板")
+    
+    class Meta: 
+         model = UserInfo
+         fields = ('name', 'sex', 'status', 'lovebridge', 'hometown', 'school', 
+                   'club', 'join_dt', 'progress', 'positions',
+                   'interest', 'self_introduction', 'word')
+         
+         
+    
+    

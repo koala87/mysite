@@ -1,7 +1,0 @@
-from django.shortcuts import render
-
-# Create your views here.
-
-def traning(request):
-    
-    return render(request, 'training/training.html')

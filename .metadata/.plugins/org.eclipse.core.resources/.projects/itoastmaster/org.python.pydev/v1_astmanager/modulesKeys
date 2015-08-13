@@ -18,6 +18,9 @@ login.apps|C:\Users\jyqi\mysite\itoastmaster\login\apps.py
 login.form|C:\Users\jyqi\mysite\itoastmaster\login\form.py
 login.migrations.0001_initial|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0001_initial.py
 login.migrations.0002_auto_20150811_2220|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0002_auto_20150811_2220.py
+login.migrations.0003_province|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0003_province.py
+login.migrations.0004_city|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0004_city.py
+login.migrations.0005_province1_school|C:\Users\jyqi\mysite\itoastmaster\login\migrations\0005_province1_school.py
 login.migrations.__init__|C:\Users\jyqi\mysite\itoastmaster\login\migrations\__init__.py
 login.models|C:\Users\jyqi\mysite\itoastmaster\login\models.py
 login.tests|C:\Users\jyqi\mysite\itoastmaster\login\tests.py

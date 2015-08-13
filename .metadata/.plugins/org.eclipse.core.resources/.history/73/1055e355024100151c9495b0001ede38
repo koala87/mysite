@@ -1,0 +1,14 @@
+{% extends "common/base.html" %}
+
+{% block title %}
+REGISTER
+{% endblock %}
+
+{% block content %}
+{% csrf_token %}
+<h2>Register Failed</h2>
+{{form.errors}}
+
+<a href="/home"><h4>Back</h4></a>
+
+{% endblock %}
