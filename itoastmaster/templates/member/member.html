@@ -11,6 +11,10 @@ MEMBER
   <tbody>
 	{% for i in people %}
 	  <tr>
+        
+        <td>
+          <img src="/static/pic/upload/{{i.portrait}}" width="50%"/>
+        </td>
         <td><label>{{i.name}}</label></td>
       </tr>
     {% endfor %}

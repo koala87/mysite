@@ -7,7 +7,7 @@ REGISTER
 {% block content %}
 {% csrf_token %}
 <h2>Register Failed</h2>
-{{form.errors}}
+{{error}}
 
 <a href="/home"><h4>Back</h4></a>
 

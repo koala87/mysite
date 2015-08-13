@@ -4,6 +4,36 @@ from django.db import models
 from club.models import Club 
 
 # Create your models here.
+class Province1(models.Model):
+    pid = models.IntegerField()
+    name = models.CharField(max_length=100)
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.name
+    
+    
+class School(models.Model):
+    pid = models.IntegerField()
+    name = models.CharField(max_length=100)
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.name
+    
+class Province(models.Model):
+    pid = models.IntegerField()
+    name = models.CharField(max_length=100)
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.name
+    
+    
+class City(models.Model):
+    pid = models.IntegerField()
+    name = models.CharField(max_length=100)
+    
+    def __str__(self):              # __unicode__ on Python 2
+        return self.name
+    
 
 class User(models.Model):
     email = models.CharField(max_length=200)

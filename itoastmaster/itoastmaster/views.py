@@ -1,3 +1,4 @@
+#coding=utf-8
 from django.shortcuts import render
 
 from login.models import UserInfo
@@ -7,20 +8,20 @@ def home(request):
     # description, icon, page, disable
     path = '/static/pic/'
     modules = [
-        #['Register', 'sign.jpg', 'register', True],
-        #['Login', 'enter.jpg', 'login', True],
-        ['Profile', 'home.jpg', 'register_info', True],
-        ['News', 'news.jpg', 'news', True],
-        ['Clubs', 'club.jpg', 'club', True],
-        ['Members', 'people.jpg', 'member', True],
-        ['Lovebridge', 'love.jpg', 'lovebridge', True],
-        ['CC Manual', 'cc.jpg', 'cc_manual', False],
-        ['CL Manual', 'cl.jpg', 'cl_manual', False],
-        ['Vote Best', 'vote.jpg', 'polls', False],
-        ['Brain Timer', 'timer.jpg', 'timer', False],      
-        ['Video', 'video.jpg', 'video', True],
-        ['Training', 'sign.jpg', 'training', True],
-        ['Material', 'material.jpg', 'material', True],
+        # ['Register', 'sign.jpg', 'register', True],
+        # ['Login', 'enter.jpg', 'login', True],
+        ['主页', 'home.jpg', 'register_info', True],
+        ['新闻', 'news.jpg', 'news', True],
+        ['俱乐部', 'club.jpg', 'club', True],
+        ['会员', 'people.jpg', 'member', True],
+        ['鹊桥', 'love.jpg', 'lovebridge', True],
+        ['CC手册', 'cc.jpg', 'cc_manual', False],
+        ['CL手册', 'cl.jpg', 'cl_manual', False],
+        ['投票最佳', 'vote.jpg', 'polls', False],
+        ['智能计时器', 'timer.jpg', 'timer', False],
+        ['视频', 'video.jpg', 'video', True],
+        ['培训报名', 'sign.jpg', 'training', True],
+        ['文档资料', 'material.jpg', 'material', True],
         
     ]
     

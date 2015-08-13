@@ -7,8 +7,10 @@ from django.core.context_processors import csrf
 from login.models import User
 from login.models import UserInfo
 from login.form import RegisterInfo
+from login.models import Province, City, Province1, School
+from club.models import Club
 
-
+from django.http import HttpResponseRedirect
 
 
 def login(request):
@@ -154,55 +156,61 @@ def handle_uploaded_file(f, pic):
      
 def register_info(request):
 
-    email = 'jinyingqi@126.com'
-    form = RegisterInfo(request)
+    # for generating select choice
+    pro = Province.objects.order_by("name")
+    city = City.objects.order_by("name")
+    pro1 = Province1.objects.order_by("name")
+    school = School.objects.order_by("name")
+    club = Club.objects.order_by("name")
+    
+    error = []
     people = ''
     
     if 'email' in request.session:
-        #email = request.session['email']
+        email = request.session['email']
         if email:
             try:
                 people = UserInfo.objects.get(email=email)
             except:
-                people = ''
-                
-        if people:
-            form = RegisterInfo(initial={'name' : people.name,
-                                  'sex' : people.sex,
-                                  'status' : people.status,
-                                  'lovebridge' : people.lovebridge,
-                                  'hometown' : people.hometown,
-                                  'school' : people.school,
-                                  'club' : people.club,
-                                  'join_dt' : people.join_dt,
-                                  'progress' : people.progress,
-                                  'positions' : people.positions,
-                                  'interest' : people.interest,
-                                  'self_introduction' : people.self_introduction,
-                                  'word' : people.word})
+                error.append('no UserInfo for %s' % email)
+
+    if error:
+        return render_to_response("login/register_info_fail.html", {'error' : error})   
+               
+    if not people:
+        return HttpResponseRedirect('login')
          
     if request.method == 'POST':   
-        #if form.is_valid():
-        if people:
-            data = request.POST
-            people.name = data['name']
-            people.sex = data['sex']
-            people.status = data['status']
-            #people.lovebridge = data['lovebridge']
-            people.hometown = data['hometown']
-            people.school = data['school']
-            #people.club = data['club']
-            #people.join_dt = data['join_dt']
-            people.progress = data['progress']
-            people.positions = data['positions']
-            people.interest = data['interest']
-            people.self_introduction = data['self_introduction']
-            people.word = data['word']
+        data = request.POST
+        if 'name' in data:
+            people.name = request.POST['name']
             
-            
-            people.save()
-        else:
-            return render_to_response("login/register_info_fail.html", {'form' : form})
-
-    return render_to_response("login/register_info.html", {'form' : form, 'csrf_token' : request.COOKIES['csrftoken']})
-
+        #people.sex = data['sex']
+        #people.status = data['status']
+        #people.lovebridge = data['lovebridge']
+        #people.hometown = data['hometown']
+        #people.school = data['school']
+        #people.club = data['club']
+        #people.join_dt = data['join_dt']
+        #people.progress = data['progress']
+        #people.positions = data['positions']
+        #people.interest = data['interest']
+        #people.self_introduction = data['self_introduction']
+        #people.word = data['word']
+        
+        if 'pic' in request.FILES:
+            pic_file = request.FILES['pic']
+            pic_name = email + '.jpg'        
+            handle_uploaded_file(pic_file, pic_name)
+            people.portrait = pic_name
+                
+        people.save()
+        
+    return render_to_response("login/register_info.html", {'csrf_token' : request.COOKIES['csrftoken'],
+                                                           'pro' : pro,
+                                                           'city' : city,
+                                                           'pro1' : pro1,
+                                                           'school' : school,
+                                                           'club' : club,
+                                                           'people' : people,
+                                                           'name' : 'harry'})
